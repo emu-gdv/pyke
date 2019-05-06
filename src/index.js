@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./Styles/styles.css";
-import "./Styles/styles.scss";
+import "./assets/styles/styles.css";
+import "./assets/styles/styles.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ExampleNav from "./Components/navbar";
+import Home from "./containers/home";
 
-function App() {
-  return <ExampleNav/>;
-}
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+ReactDOM.render(<Home/>, document.getElementById("root"));

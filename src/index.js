@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles.css";
-import "./styles.scss";
+import "./Styles/styles.css";
+import "./Styles/styles.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ExampleNav from "./Components/navbar";
 
-class App extends React.Component {
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
+function App() {
+  return <ExampleNav/>;
 }
 
-var mountNode = document.getElementById("app");
-ReactDOM.render(<App name="User"/>, mountNode);
+ReactDOM.render(<App/>, document.getElementById("root"));

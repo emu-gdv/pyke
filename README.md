@@ -31,3 +31,15 @@ npm run build-dev
 ## Running
 
 Open the file `dist/index.html` in your browser
+
+## Important Documentation
+
+https://reactstrap.github.io/
+
+https://reacttraining.com/react-router/web/guides/quick-start
+
+https://reactjs.org/docs/getting-started.html
+
+https://sass-lang.com/documentation
+
+https://webpack.js.org/concepts

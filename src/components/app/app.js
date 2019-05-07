@@ -9,7 +9,18 @@ import {
   Col,
   Container,
   Jumbotron,
-  Row
+  Row,
+  CardDeck,
+  Card,
+  CardBody,
+  CardImg,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  Button,
+  ListGroup,
+  ListGroupItem,
+  Table
 } from "reactstrap";
 
 const items = [
@@ -85,7 +96,7 @@ export default class App extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} width="100%" alt={item.altText}/>
+          <img src={item.src} width="100%" alt={item.altText} />
           <CarouselCaption
             captionText={item.caption}
             captionHeader={item.caption}
@@ -95,34 +106,145 @@ export default class App extends Component {
     });
 
     return (
-      <Container fluid={true}>
-        <Row>
-          <Col>
-            <Carousel
-              activeIndex={activeIndex}
-              next={this.next}
-              previous={this.previous}
-            >
-              <CarouselIndicators
-                items={items}
+      <React.Fragment>
+        <Container fluid>
+          <Row>
+            <Col>
+              <Carousel
                 activeIndex={activeIndex}
-                onClickHandler={this.goToIndex}
+                next={this.next}
+                previous={this.previous}
+              >
+                <CarouselIndicators
+                  items={items}
+                  activeIndex={activeIndex}
+                  onClickHandler={this.goToIndex}
+                />
+                {slides}
+                <CarouselControl
+                  direction="prev"
+                  directionText="Previous"
+                  onClickHandler={this.previous}
+                />
+                <CarouselControl
+                  direction="next"
+                  directionText="Next"
+                  onClickHandler={this.next}
+                />
+              </Carousel>
+            </Col>
+          </Row>
+        </Container>
+        <Container className="mt-5">
+          <Row>
+            <Table dark>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Row>
+        </Container>
+        <Jumbotron fluid className="text-center mt-5">
+          <Container fluid>
+            <h1 className="display-1">Fluid jumbotron</h1>
+            <p className="lead">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              iaculis quam id rhoncus congue. Donec ut accumsan nisl, vitae
+              fermentum enim. Nullam tristique rutrum orci, at placerat urna
+              blandit a. Donec id auctor quam, quis placerat ligula. Quisque
+              ultrices augue vel viverra hendrerit. Donec ornare odio et tortor
+              volutpat gravida. Morbi at justo magna. Nulla est mauris, dictum
+              ut neque a, venenatis accumsan leo. Integer eu quam eget turpis
+              vestibulum porttitor quis in sem. Aenean malesuada, eros porta
+              viverra pretium, dui diam scelerisque mi, vitae sollicitudin ex
+              tortor a dolor. Vestibulum ante ipsum primis in faucibus orci
+              luctus et ultrices posuere cubilia Curae;
+            </p>
+          </Container>
+        </Jumbotron>
+        <Container>
+          <CardDeck className="pt-5">
+            <Card>
+              <CardImg
+                top
+                width="100%"
+                src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                alt="Card image cap"
               />
-              {slides}
-              <CarouselControl
-                direction="prev"
-                directionText="Previous"
-                onClickHandler={this.previous}
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </CardText>
+                <Button>Button</Button>
+              </CardBody>
+            </Card>
+            <Card>
+              <CardImg
+                top
+                width="100%"
+                src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                alt="Card image cap"
               />
-              <CarouselControl
-                direction="next"
-                directionText="Next"
-                onClickHandler={this.next}
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>
+                  This card has supporting text below as a natural lead-in to
+                  additional content.
+                </CardText>
+                <Button>Button</Button>
+              </CardBody>
+            </Card>
+            <Card>
+              <CardImg
+                top
+                width="100%"
+                src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                alt="Card image cap"
               />
-            </Carousel>
-          </Col>
-        </Row>
-        <Jumbotron fluid>
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This card has even longer
+                  content than the first to show that equal height action.
+                </CardText>
+                <Button>Button</Button>
+              </CardBody>
+            </Card>
+          </CardDeck>
+        </Container>
+        <Jumbotron fluid className="text-center mt-5">
           <Container fluid>
             <h1 className="display-1 center">Fluid jumbotron</h1>
             <p className="lead">
@@ -140,7 +262,26 @@ export default class App extends Component {
             </p>
           </Container>
         </Jumbotron>
-      </Container>
+        <Container className="pt-5">
+          <ListGroup flush>
+            <ListGroupItem disabled tag="a" href="#">
+              Cras justo odio
+            </ListGroupItem>
+            <ListGroupItem tag="a" href="#">
+              Dapibus ac facilisis in
+            </ListGroupItem>
+            <ListGroupItem tag="a" href="#">
+              Morbi leo risus
+            </ListGroupItem>
+            <ListGroupItem tag="a" href="#">
+              Porta ac consectetur ac
+            </ListGroupItem>
+            <ListGroupItem tag="a" href="#">
+              Vestibulum at eros
+            </ListGroupItem>
+          </ListGroup>
+        </Container>
+      </React.Fragment>
     );
   }
 }

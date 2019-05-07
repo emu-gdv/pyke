@@ -36,9 +36,14 @@ export default class PykeNav extends React.Component {
       <header>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">
-            <img alt="Pyke Logo" src={logo} height="75px" className="d-inline-block align-top"/>
+            <img
+              alt="Pyke Logo"
+              src={logo}
+              height="75px"
+              className="d-inline-block align-top"
+            />
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggle}/>
+          <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
@@ -62,7 +67,7 @@ export default class PykeNav extends React.Component {
                       <NavLink href="/dashboard">Dashboard</NavLink>
                     </NavItem>
                   </DropdownItem>
-                  <DropdownItem divider/>
+                  <DropdownItem divider />
                   <DropdownItem>
                     <NavItem>
                       <NavLink href="/logout">Logout</NavLink>

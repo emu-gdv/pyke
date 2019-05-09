@@ -1,10 +1,10 @@
 import React from "react";
 
 import Header from "../../common/header";
-import Home from "../../components/home";
 import Footer from "../../common/footer";
+import Info from "../../components/info";
 
-export default class HomeContainer extends React.Component {
+export default class InfoContainer extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -13,7 +13,7 @@ export default class HomeContainer extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Home />
+        <Info />
         <Footer />
       </React.Fragment>
     );

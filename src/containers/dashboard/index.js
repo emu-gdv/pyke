@@ -1,8 +1,16 @@
 import React from "react";
-import ".//dashboard.scss";
 
-export default class Dashboard extends React.Component {
+import Dashboard from "../../components/dashboard";
+
+export default class DashboardContainer extends React.Component {
   constructor(props) {
     super(props);
+  }
+  render() {
+    return (
+      <React.Fragment>
+        <Dashboard />
+      </React.Fragment>
+    );
   }
 }

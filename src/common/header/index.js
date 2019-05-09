@@ -1,6 +1,6 @@
 import React from "react";
-import PykeNav from "../../components/navbar";
-import "../../components/navbar/navbar.scss";
+import PykeNav from "../navbar";
+import ".//header.scss";
 
 export default class Header extends React.Component {
   constructor(props) {

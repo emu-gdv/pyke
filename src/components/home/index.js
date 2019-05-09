@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ".//app.scss";
+import ".//home.scss";
 import {
   Carousel,
   CarouselCaption,
@@ -44,7 +44,7 @@ const items = [
   }
 ];
 
-export default class App extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };

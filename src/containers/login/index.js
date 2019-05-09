@@ -1,8 +1,16 @@
 import React from "react";
-import ".//login.scss";
+import Login from "../../components/login";
 
-export default class Login extends React.Component {
+export default class LoginContainer extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Login />
+      </React.Fragment>
+    );
   }
 }

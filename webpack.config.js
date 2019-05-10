@@ -41,6 +41,17 @@ const config = {
         ]
       },
       {
+        test: /\.jpg$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              mimetype: "image/jpg"
+            }
+          }
+        ]
+      },
+      {
         test: /\.svg$/,
         use: "file-loader"
       },

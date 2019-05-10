@@ -23,24 +23,22 @@ import {
   Table
 } from "reactstrap";
 
+
 const items = [
   {
-    src:
-      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-    altText: "Slide 1",
-    caption: "Slide 1"
+    src: require("../../assets/images/home/web_dev.png"),
+    altText: "Web Development",
+    caption: "Project teaching React & Webpack, Devops, and CI"
   },
   {
-    src:
-      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-    altText: "Slide 2",
-    caption: "Slide 2"
+    src: require("../../assets/images/home/game_dev.png"),
+    altText: "Game Development",
+    caption: "Projects using Unity to create modern game designs"
   },
   {
-    src:
-      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-    altText: "Slide 3",
-    caption: "Slide 3"
+    src: require("../../assets/images/home/software_dev.jpg"),
+    altText: "Software Development",
+    caption: "Projects involving Java, exploring advanced concepts"
   }
 ];
 
@@ -99,7 +97,7 @@ export default class Home extends Component {
           <img src={item.src} width="100%" alt={item.altText} />
           <CarouselCaption
             captionText={item.caption}
-            captionHeader={item.caption}
+            captionHeader={item.altText}
           />
         </CarouselItem>
       );
@@ -107,7 +105,7 @@ export default class Home extends Component {
 
     return (
       <React.Fragment>
-        <Container fluid>
+        <Container fluid className="home-carousel">
           <Row>
             <Col>
               <Carousel
@@ -135,35 +133,40 @@ export default class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <Container className="mt-5">
+        <Container className="mt-3">
+          <Row>
+            <Col sm="12">
+              <h3 className="text-center mb-5">Commit Leaderboards</h3>
+            </Col>
+          </Row>
           <Row>
             <Table dark>
               <thead>
                 <tr>
                   <th>#</th>
                   <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>Commit #</th>
+                  <th>Github User</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
                   <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <td>432</td>
+                  <td>taco-cat</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <td>Jessica</td>
+                  <td>380</td>
+                  <td>pocket-type</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
                   <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
+                  <td>263</td>
+                  <td>fire-spill</td>
                 </tr>
               </tbody>
             </Table>
@@ -171,7 +174,7 @@ export default class Home extends Component {
         </Container>
         <Jumbotron fluid className="text-center mt-5">
           <Container fluid>
-            <h1 className="display-1">Fluid jumbotron</h1>
+            <h1 className="display-1">What do we do?</h1>
             <p className="lead">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               iaculis quam id rhoncus congue. Donec ut accumsan nisl, vitae

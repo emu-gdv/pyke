@@ -1,0 +1,29 @@
+@import "../../assets/styles/styles";
+
+.four-zero-four{
+  .jumbotron {
+    background-color: lightslategray;
+    color: azure;
+  }
+
+  h1 {
+    font-family: $font-roboto-mono;
+  }
+
+  a {
+    font-family: $font-quattrocento;
+    color: orange;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: orange;
+  }
+
+  a:visited {
+    color: orange;
+  }
+
+
+}
+

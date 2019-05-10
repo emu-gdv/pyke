@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Form, FormGroup, Input, Button } from "reactstrap";
+import {Link} from 'react-router-dom'
 import ".//login.scss";
 
 export default class Login extends React.Component {
@@ -28,8 +29,12 @@ export default class Login extends React.Component {
                 placeholder="**********"
               />
               <Button>Submit</Button>
+              <Button tag={Link} exact to="/auth/google" >
+                Log in With Google
+              </Button>
             </FormGroup>
           </Form>
+
         </Row>
       </Container>
     );

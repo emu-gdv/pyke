@@ -9,7 +9,7 @@ export default class Dashboard extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container fluid classname="dashboard">
         Dashboard
       </Container>
     );

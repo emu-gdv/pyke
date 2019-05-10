@@ -133,7 +133,7 @@ export default class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <Container className="mt-3">
+        <Container className="mt-3 home-leaderboard">
           <Row>
             <Col sm="12">
               <h3 className="text-center mb-5">Commit Leaderboards</h3>
@@ -172,7 +172,7 @@ export default class Home extends Component {
             </Table>
           </Row>
         </Container>
-        <Jumbotron fluid className="text-center mt-5">
+        <Jumbotron fluid className="text-center mt-5 home-about">
           <Container fluid>
             <h1 className="display-1">What do we do?</h1>
             <p className="lead">
@@ -190,7 +190,7 @@ export default class Home extends Component {
             </p>
           </Container>
         </Jumbotron>
-        <Container>
+        <Container className="home-cards">
           <CardDeck className="pt-5">
             <Card>
               <CardImg
@@ -247,7 +247,7 @@ export default class Home extends Component {
             </Card>
           </CardDeck>
         </Container>
-        <Jumbotron fluid className="text-center mt-5">
+        <Jumbotron fluid className="text-center mt-5 home-jumbo">
           <Container fluid>
             <h1 className="display-1 center">Fluid jumbotron</h1>
             <p className="lead">
@@ -265,7 +265,7 @@ export default class Home extends Component {
             </p>
           </Container>
         </Jumbotron>
-        <Container className="pt-5">
+        <Container className="pt-5 home-list">
           <ListGroup flush>
             <ListGroupItem disabled tag="a" href="#">
               Cras justo odio

@@ -7,12 +7,12 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "clean": "rm dist/bundle.js",
-    "build-dev": "webpack -d --mode development",
-    "build-prod": "webpack -p --mode production",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p"
+    "postinstall": "webpack -d --mode development",
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",

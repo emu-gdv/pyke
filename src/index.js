@@ -23,6 +23,7 @@ function App() {
         <Route exact path="/info" component={InfoContainer} />
         <Route exact path="/login" component={LoginContainer} />
         <Route exact path="/dashboard" component={DashboardContainer} />
+        <Route exact path={"/auth/google"} />
         <Route component={NoMatch} />
       </Switch>
     </Router>

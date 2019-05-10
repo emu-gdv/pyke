@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static(__dirname + '/'));
 
-require('./src/index')(app);
+require('src/index')(app);
 
 app.get('*', (req,res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));

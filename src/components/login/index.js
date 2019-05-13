@@ -29,7 +29,7 @@ export default class Login extends React.Component {
                 placeholder="**********"
               />
               <Button>Submit</Button>
-              <Button tag={Link} exact to="/auth/google" >
+              <Button tag={Link} exact to="/auth/google" onClick={location.reload}>
                 Log in With Google
               </Button>
             </FormGroup>

@@ -1,11 +1,14 @@
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
 
 const config = {
+  mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
+  plugins: [new Dotenv()],
   module: {
     rules: [
       {
@@ -15,19 +18,12 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader"
-        ],
+        use: ["style-loader", "css-loader"],
         exclude: /\.module\.css$/
       },
       {
         test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.png$/,
@@ -66,10 +62,7 @@ const config = {
     ]
   },
   resolve: {
-    extensions: [
-      ".js",
-      ".jsx"
-    ]
+    extensions: [".js", ".jsx"]
   },
   devServer: {
     contentBase: "./dist",

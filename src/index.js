@@ -15,6 +15,7 @@ import DashboardContainer from "./containers/dashboard";
 ReactDOM.render(<App />, document.getElementById("root"));
 
 function App() {
+
   return (
     <Router>
       <Switch>

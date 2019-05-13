@@ -1,10 +1,13 @@
 const express = require("express");
 const path = require("path");
+
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+const LocalStrategy = require("passport-local").Strategy;
 
 const port = process.env.PORT || 8080;
 const app = express();
+
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));
 
@@ -15,8 +18,8 @@ app.use(express.static(path.join(__dirname, "dist")));
 passport.use(
   new GoogleStrategy(
     {
-      clientID: process.env['OAUTHID'],
-      clientSecret: process.env['OAUTHSECRET'],
+      clientID: process.env.OAUTH_ID,
+      clientSecret: process.env.OAUTH_SECRET,
       callbackURL: "/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done) {
@@ -51,6 +54,50 @@ app.get(
     res.redirect("/");
   }
 );
+
+passport.use(
+  new LocalStrategy(function(username, password, done) {
+    User.findOne({ username: username }, function(err, user) {
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false);
+      }
+      if (!user.verifyPassword(password)) {
+        return done(null, false);
+      }
+      return done(null, user);
+    });
+  })
+);
+
+passport.serializeUser(function(user, cb) {
+  cb(null, user.id);
+});
+
+passport.deserializeUser(function(id, cb) {
+  User.findOne({ username: username }, function(err, user) {
+    if (err) {
+      return cb(err);
+    }
+    cb(null, user);
+  });
+});
+
+app.post(
+  "/login",
+  passport.authenticate("local", { failureRedirect: "/login" }),
+  function(req, res) {
+    res.redirect("/");
+  }
+);
+
+app.get("/logout", function(req, res) {
+  req.logout();
+  res.redirect("/");
+});
+
 app.get("/ping", function(req, res) {
   return res.send("pong");
 });

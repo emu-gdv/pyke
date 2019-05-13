@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 
@@ -10,6 +12,10 @@ const app = express();
 
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));
+
+/*
+Passport JS Section
+ */
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -85,13 +91,32 @@ passport.deserializeUser(function(id, cb) {
   });
 });
 
-app.post(
-  "/login",
-  passport.authenticate("local", { failureRedirect: "/login" }),
+app.use(passport.initialize());
+app.use(passport.session());
+
+/*
+Routes
+ */
+
+app.post('/login',
+  function(req, res){
+    res.render('login');
+  });
+
+app.get('/auth/google',
+  passport.authenticate('google'));
+
+app.get('/auth/google/callback',
+  passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
-    res.redirect("/");
-  }
-);
+    res.redirect('/');
+  });
+
+app.get('/profile',
+  require('connect-ensure-login').ensureLoggedIn(),
+  function(req, res){
+    res.render('profile', { user: req.user });
+  });
 
 app.get("/logout", function(req, res) {
   req.logout();
@@ -104,4 +129,5 @@ app.get("/ping", function(req, res) {
 app.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
+
 app.listen(port);

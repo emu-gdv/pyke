@@ -22,6 +22,7 @@
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.5",
     "bootstrap": "4.3.1",
+    "connect-ensure-login": "^0.1.1",
     "css-loader": "2.1.1",
     "express": "^4.16.4",
     "file-loader": "3.0.1",
@@ -50,6 +51,7 @@
     "webpack-dev-server": "^3.3.1"
   },
   "devDependencies": {
+    "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "12.0.0",
     "eslint-plugin-import": "^2.17.2",

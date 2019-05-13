@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Form, FormGroup, Input, Button } from "reactstrap";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import ".//login.scss";
 
 export default class Login extends React.Component {
@@ -9,39 +9,44 @@ export default class Login extends React.Component {
   }
 
   render() {
-
     return (
       <Container fluid className="login">
         <Row className="h-100 w-100 position-absolute ">
           <Form className="text-center m-auto">
             <h2 className="form-head">{this.props.heading}</h2>
             <FormGroup>
-              <Input className="text-center mt-2 mb-2"
+              <Input
+                className="text-center mt-2 mb-2"
                 type="email"
-                name="email"
+                name="username"
                 id="form-email"
                 placeholder="myemail@emich.edu"
+                autocomplete
               />
-              <Input className="text-center mt-2 mb-2"
+              <Input
+                className="text-center mt-2 mb-2"
                 type="password"
                 name="password"
                 id="form-password"
                 placeholder="**********"
               />
               <Button>Submit</Button>
-              <Button tag={Link} exact to="/auth/google" onClick={location.reload}>
+              <Button
+                tag={Link}
+                exact
+                to="/auth/google"
+                onClick={location.reload}
+              >
                 Log in With Google
               </Button>
             </FormGroup>
           </Form>
-
         </Row>
       </Container>
     );
   }
-
 }
 
 Login.defaultProps = {
-  heading: "Login",
+  heading: "Login"
 };

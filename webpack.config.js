@@ -7,7 +7,6 @@ const config = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
-  plugins: [new Dotenv()],
   module: {
     rules: [
       {

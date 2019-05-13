@@ -18,8 +18,8 @@ app.use(express.static(path.join(__dirname, "dist")));
 passport.use(
   new GoogleStrategy(
     {
-      clientID: process.env.OAUTH_ID,
-      clientSecret: process.env.OAUTH_SECRET,
+      clientID: process.env["OAUTH_ID"],
+      clientSecret: process.env["OAUTH_SECRET"],
       callbackURL: "/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done) {

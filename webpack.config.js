@@ -1,5 +1,4 @@
 const path = require("path");
-const SentryWebpackPlugin = require("@sentry/webpack-plugin");
 
 const config = {
   mode: "development",
@@ -9,14 +8,6 @@ const config = {
     filename: "bundle.js"
   },
   target: "web",
-  plugins: [
-    new SentryWebpackPlugin({
-      include: ".",
-      ignoreFile: ".sentrycliignore",
-      ignore: ["node_modules", "webpack.config.js"],
-      configFile: "sentry.properties"
-    })
-  ],
   module: {
     rules: [
       {

@@ -63,7 +63,7 @@ app.get(
 
 passport.use(
   new LocalStrategy(function(username, password, done) {
-    User.findOne({ username: username }, function(err, user) {
+    User.findorCreate({ username: username }, function(err, user) {
       if (err) {
         return done(err);
       }
@@ -99,8 +99,9 @@ Routes
  */
 
 app.post('/login',
-  function(req, res){
-    res.render('login');
+  passport.authenticate('local', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
   });
 
 app.get('/auth/google',

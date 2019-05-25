@@ -37,20 +37,20 @@ export default class Login extends React.Component {
                 autocomplete="new-password"
               />
               <Button className="submit w-100 mb-1">Submit</Button>
-              <Link
-                exact
-                to="/create-account"
-                className="create-account-link d-inline-block float-left pl-2"
+              <Button className="create-account-link d-inline-block float-left pl-2 mt-2 mb-2"
+                      tag={Link}
+                      exact
+                      to="/create-account"
               >
                 Create Account
-              </Link>
-              <Link
-                exact
-                to="/forget-password"
-                className="forget-link d-inline-block float-right pr-2"
+              </Button>
+              <Button className="forget-link d-inline-block float-right pr-2 mt-2 mb-2"
+                      tag={Link}
+                      exact
+                      to="/forget-password"
               >
                 Forget Password?
-              </Link>
+              </Button>
               <Button
                 className="google-sso w-100 mt-1 mb-1"
                 tag={Link}
@@ -58,7 +58,7 @@ export default class Login extends React.Component {
                 to="/auth/google"
                 onClick={location.reload}
               >
-                <img src={g_logo} className="google-icon" />
+                <img src={g_logo} className="google-icon" alt="Google Logo"/>
                 <span className="google-text">Sign in with Google</span>
               </Button>
             </FormGroup>

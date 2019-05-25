@@ -13,6 +13,8 @@ const app = express();
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));
 
+app.use(passport.initialize());
+app.use(passport.session());
 /*
 Passport JS Section
  */
@@ -91,32 +93,29 @@ passport.deserializeUser(function(id, cb) {
   });
 });
 
-app.use(passport.initialize());
-app.use(passport.session());
-
 /*
 Routes
  */
 
-app.post('/login',
-  passport.authenticate('local', { failureRedirect: '/login' }),
+app.post("/login",
+  passport.authenticate("local", { failureRedirect: "/login" }),
   function(req, res) {
-    res.redirect('/');
+    res.redirect("/");
   });
 
-app.get('/auth/google',
-  passport.authenticate('google'));
+app.get("/auth/google",
+  passport.authenticate("google"));
 
-app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login' }),
+app.get("/auth/google/callback",
+  passport.authenticate("google", { failureRedirect: "/login" }),
   function(req, res) {
-    res.redirect('/');
+    res.redirect("/");
   });
 
-app.get('/profile',
-  require('connect-ensure-login').ensureLoggedIn(),
-  function(req, res){
-    res.render('profile', { user: req.user });
+app.get("/profile",
+  require("connect-ensure-login").ensureLoggedIn(),
+  function(req, res) {
+    res.render("profile", { user: req.user });
   });
 
 app.get("/logout", function(req, res) {

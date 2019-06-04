@@ -24,10 +24,8 @@
   }
 
   .google-icon {
-    display: inline-block;
     width: 42px;
     height: 42px;
-    vertical-align: middle;
     float: left;
   }
 
@@ -36,5 +34,6 @@
     vertical-align: middle;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    padding: 9px;
   }
 }

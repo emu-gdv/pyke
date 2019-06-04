@@ -1,0 +1,8 @@
+.dashboard-sidebar {
+  width: 200px;
+}
+
+.dashboard {
+  width: calc(100% - 200px);
+  position: absolute;
+}

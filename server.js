@@ -38,7 +38,7 @@ passport.use(
       callbackURL: "/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done) {
-      User.findOrCreate({ googleId: profile.id }, function(err, user) {
+      GoogleUser.findOrCreate({ googleId: profile.id }, function(err, user) {
         return done(err, user);
       });
     }

@@ -12,6 +12,9 @@ const LocalStrategy = require("passport-local").Strategy;
 const port = process.env.PORT || 8080;
 const app = express();
 
+const googleSchema = mongoose.Schema({googleId: 'string', userName: 'string', creationDate: 'date', avatar: 'string'});
+mongoose.model("GoogleUser", googleSchema);
+
 mongoose.connect(process.env["MONGODB_URI"], {useNewUrlParser: true});
 
 app.use(express.static(__dirname));

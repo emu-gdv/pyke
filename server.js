@@ -3,12 +3,16 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
+const mongoose = require("mongoose");
+
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const LocalStrategy = require("passport-local").Strategy;
 
 const port = process.env.PORT || 8080;
 const app = express();
+
+mongoose.connect(process.env["MONGODB_URI"], {useNewUrlParser: true});
 
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));

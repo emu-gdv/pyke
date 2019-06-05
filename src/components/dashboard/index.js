@@ -14,19 +14,9 @@ export default class Dashboard extends React.Component {
     super(props);
   }
 
-
   render() {
     return (
       <React.Fragment>
-        <aside className="dashboard-sidebar d-inline-block">
-          <ListGroup flush>
-            <ListGroupItem tag={Link} href="#"><FontAwesomeIcon icon={faGithubSquare}/> Integration</ListGroupItem>
-            <ListGroupItem tag={Link} href="#"><FontAwesomeIcon icon={faFolder}/> Projects</ListGroupItem>
-            <ListGroupItem tag={Link} href="#"><FontAwesomeIcon icon={faDog}/> Dog</ListGroupItem>
-            <ListGroupItem tag={Link} href="#"><FontAwesomeIcon icon={faTrash}/> Trash</ListGroupItem>
-            <ListGroupItem tag={Link} href="#"><FontAwesomeIcon icon={faFighterJet}/> Top Gun</ListGroupItem>
-          </ListGroup>
-        </aside>
         <Container fluid className="dashboard d-inline-block">
           <Row>
             <Col lg={4} md={6} sm={12} xs={12} className="text-center">
@@ -38,6 +28,9 @@ export default class Dashboard extends React.Component {
             <Col lg={4} md={6} sm={12} xs={12} className="text-center">
               <h2>Trash</h2>
             </Col>
+          </Row>
+          <Row>
+            <code>ASDF</code>
           </Row>
         </Container>
       </React.Fragment>

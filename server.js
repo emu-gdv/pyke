@@ -1,5 +1,8 @@
 require("dotenv").config();
 require("./config/passport-strategies/local");
+require("./config/passport-strategies/google-oauth");
+require("./config/passport-strategies/github-oauth");
+require("./config/routes/routes");
 
 const express = require("express");
 const path = require("path");

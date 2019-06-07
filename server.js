@@ -19,6 +19,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 
 mongoose.connect(process.env["MONGODB_URI"], { useNewUrlParser: true });
+const db = mongoose.connection;
 
 // BodyParser Middleware
 app.use(bodyParser.json());

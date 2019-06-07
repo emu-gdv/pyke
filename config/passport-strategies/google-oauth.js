@@ -1,7 +1,7 @@
 const passport = require("passport");
 const mongoose = require("mongoose");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
-const User = require("../models/user");
+const User = require("/config/models/user");
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept

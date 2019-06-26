@@ -2,19 +2,22 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-const User = require("/config/models/user");
+
 const mongoose = require("mongoose");
 const passport = require("passport");
+
+const User = require("/config/models/user");
+
 /*
 Routes
  */
 
 // Register User
-app.post('/register', function(req, res){
+app.post("/register", function(req, res) {
   const password = req.body.password;
   const password2 = req.body.password2;
 
-  if (password == password2){
+  if (password == password2) {
     const newUser = new User({
       name: req.body.name,
       email: req.body.email,
@@ -22,12 +25,12 @@ app.post('/register', function(req, res){
       password: req.body.password
     });
 
-    User.createUser(newUser, function(err, user){
-      if(err) throw err;
-      res.send(user).end()
+    User.createUser(newUser, function(err, user) {
+      if (err) throw err;
+      res.send(user).end();
     });
-  } else{
-    res.status(500).send("{errors: \"Passwords don't match\"}").end()
+  } else {
+    res.status(500).send("{errors: \"Passwords don't match\"}").end();
   }
 });
 
@@ -57,9 +60,9 @@ app.get("/profile",
   });
 
 // Endpoint to get current user
-app.get('/user', function(req, res){
+app.get("/user", function(req, res) {
   res.send(req.user);
-})
+});
 
 // Log Out
 app.get("/logout", function(req, res) {

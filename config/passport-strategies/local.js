@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const LocalStrategy = require('passport-local').Strategy;
 
 
-const User = require("../models/user");
+const User = require("../models/user").User;
 
 passport.use(new LocalStrategy(
   function(username, password, done) {

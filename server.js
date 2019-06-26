@@ -1,9 +1,9 @@
 require("dotenv").config();
-require("./config/passport-strategies/local");
-require("./config/passport-strategies/google-oauth");
-require("./config/passport-strategies/github-oauth");
-require("./config/routes/routes");
-require("./config/models/user");
+// require("./config/passport-strategies/local");
+// require("./config/passport-strategies/google-oauth");
+// require("./config/passport-strategies/github-oauth");
+// require("./config/routes/routes");
+// require("./config/models/user");
 
 const express = require("express");
 const path = require("path");
@@ -19,8 +19,8 @@ app.use(express.static(path.join(__dirname, "dist")));
 const mongoose = require("mongoose");
 const passport = require("passport");
 
-mongoose.connect(process.env["MONGODB_URI"], { useNewUrlParser: true });
-const db = mongoose.connection;
+// mongoose.connect(process.env["MONGODB_URI"], { useNewUrlParser: true });
+// const db = mongoose.connection;
 
 // BodyParser Middleware
 app.use(bodyParser.json());

@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
+
 // User Schema
-const UserSchema = mongoose.Schema({
+export const UserSchema = mongoose.Schema({
   username: {
     type: String,
     index: true
@@ -24,7 +25,7 @@ const UserSchema = mongoose.Schema({
   }
 });
 
-const User = module.exports = mongoose.model("User", UserSchema);
+export const User = module.exports = mongoose.model("User", UserSchema);
 
 module.exports.getUserByUsername = function(username, callback) {
   const query = { username: username };

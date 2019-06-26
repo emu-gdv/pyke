@@ -6,7 +6,7 @@ const app = express();
 const mongoose = require("mongoose");
 const passport = require("passport");
 
-const User = require("/config/models/user");
+// const User = require("/config/models/user");
 
 /*
 Routes

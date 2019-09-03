@@ -1,27 +1,29 @@
 @import "../../assets/styles/styles";
 
 .home-carousel {
-  background-color: #f8f9fa!important;
+  background-color: #f8f9fa !important;
   padding-bottom: 1rem;
-  .carousel-item{
-    height: 30rem;
-  }
-  .carousel-caption{
-    color: white;
-    text-shadow: 1px 1px #000;
-    background: rgba(0, 0, 0, .75)
+
+  .carousel-item {
+    height: 40rem;
   }
 
-  h3, p{
+  .carousel-caption {
+    color: white;
+    text-shadow: 1px 1px #000;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  h3,
+  p {
     font-family: $font-quattrocento-sans;
   }
 
-  h3{
+  h3 {
     font-size: 2.75rem;
   }
 
   p {
     font-size: 1.25rem;
   }
-
 }

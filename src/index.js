@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./assets/styles/styles.css";
-import "./assets/styles/styles.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch } from "react-router";
 import HomeContainer from "./containers/home";
@@ -11,19 +10,25 @@ import { BrowserRouter as Router } from "react-router-dom";
 import InfoContainer from "./containers/info";
 import LoginContainer from "./containers/login";
 import DashboardContainer from "./containers/dashboard";
+import ContactContainer from "./containers/contact-us";
+import GetStartedContainer from "./containers/get-started";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App/>, document.getElementById("root"));
 
 function App() {
+
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={HomeContainer} />
-        <Route exact path="/about-us" component={AboutContainer} />
-        <Route exact path="/info" component={InfoContainer} />
-        <Route exact path="/login" component={LoginContainer} />
-        <Route exact path="/dashboard" component={DashboardContainer} />
-        <Route component={NoMatch} />
+        <Route exact path="/" component={HomeContainer}/>
+        <Route exact path="/about-us" component={AboutContainer}/>
+        <Route exact path="/info" component={InfoContainer}/>
+        <Route exact path="/login" component={LoginContainer}/>
+        <Route exact path="/dashboard" component={DashboardContainer}/>
+        <Route exact path="/contact-us" component={ContactContainer}/>
+        <Route exact path="/get-started" component={GetStartedContainer}/>
+        <Route exact path={"/auth/google"}/>
+        <Route component={NoMatch}/>
       </Switch>
     </Router>
   );

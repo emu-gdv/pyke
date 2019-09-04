@@ -133,56 +133,6 @@ export default class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <Container className="mt-4 home-leaderboard">
-          <Row>
-            <Col sm="12">
-              <h3 className="text-center mb-5">Commit Leaderboards</h3>
-            </Col>
-          </Row>
-          <Row>
-            <Table dark>
-              <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Commit #</th>
-                <th>Github User</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>432</td>
-                <td>taco-cat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jessica</td>
-                <td>380</td>
-                <td>pocket-type</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>263</td>
-                <td>fire-spill</td>
-              </tr>
-              </tbody>
-            </Table>
-          </Row>
-        </Container>
-        <Jumbotron fluid className="text-center mt-5 home-about">
-          <Container fluid>
-            <h1 className="display-1">What do we do?</h1>
-            <p className="lead">
-              We are a new and growing student organization dedicated to exploring new subjects and topics throughout
-              multiple fields including computer science, graphic design, web development, animation, and game
-              development. This is a multi-disciplinary student organization that seeks to expand and utilize knowledge
-              that we have gained to create and develop useful projects.
-            </p>
-          </Container>
-        </Jumbotron>
         <Container className="home-cards">
           <CardDeck className="pt-5">
             <Card>
@@ -236,6 +186,58 @@ export default class Home extends Component {
             </Card>
           </CardDeck>
         </Container>
+        <Jumbotron fluid className="text-center mt-5 home-about">
+          <Container fluid>
+            <h1 className="display-1">What do we do?</h1>
+            <p className="lead">
+              We are a new and growing student organization dedicated to exploring new subjects and topics throughout
+              multiple fields including computer science, graphic design, web development, animation, and game
+              development. This is a multi-disciplinary student organization that seeks to expand and utilize knowledge
+              that we have gained to create and develop useful projects.
+            </p>
+          </Container>
+        </Jumbotron>
+        <Container className="mt-4 home-leaderboard">
+          <Row>
+            <Col sm="12">
+              <h3 className="text-center mb-5">Commit Leaderboards</h3>
+            </Col>
+          </Row>
+          <Row>
+            <Table dark>
+              <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Commit #</th>
+                <th>Github User</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>432</td>
+                <td>taco-cat</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jessica</td>
+                <td>380</td>
+                <td>pocket-type</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>263</td>
+                <td>fire-spill</td>
+              </tr>
+              </tbody>
+            </Table>
+          </Row>
+        </Container>
+
+
         <Jumbotron fluid className="text-center mt-5 home-jumbo">
           <Container fluid>
             <h1 className="display-1 center">Fluid jumbotron</h1>

@@ -94,7 +94,7 @@ export default class Home extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} width="100%" alt={item.altText} />
+          <img src={item.src} width="100%" alt={item.altText}/>
           <CarouselCaption
             captionText={item.caption}
             captionHeader={item.altText}
@@ -133,7 +133,7 @@ export default class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <Container className="mt-3 home-leaderboard">
+        <Container className="mt-4 home-leaderboard">
           <Row>
             <Col sm="12">
               <h3 className="text-center mb-5">Commit Leaderboards</h3>
@@ -142,32 +142,32 @@ export default class Home extends Component {
           <Row>
             <Table dark>
               <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Commit #</th>
-                  <th>Github User</th>
-                </tr>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Commit #</th>
+                <th>Github User</th>
+              </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>432</td>
-                  <td>taco-cat</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jessica</td>
-                  <td>380</td>
-                  <td>pocket-type</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>263</td>
-                  <td>fire-spill</td>
-                </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>432</td>
+                <td>taco-cat</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jessica</td>
+                <td>380</td>
+                <td>pocket-type</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>263</td>
+                <td>fire-spill</td>
+              </tr>
               </tbody>
             </Table>
           </Row>
@@ -176,17 +176,10 @@ export default class Home extends Component {
           <Container fluid>
             <h1 className="display-1">What do we do?</h1>
             <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              iaculis quam id rhoncus congue. Donec ut accumsan nisl, vitae
-              fermentum enim. Nullam tristique rutrum orci, at placerat urna
-              blandit a. Donec id auctor quam, quis placerat ligula. Quisque
-              ultrices augue vel viverra hendrerit. Donec ornare odio et tortor
-              volutpat gravida. Morbi at justo magna. Nulla est mauris, dictum
-              ut neque a, venenatis accumsan leo. Integer eu quam eget turpis
-              vestibulum porttitor quis in sem. Aenean malesuada, eros porta
-              viverra pretium, dui diam scelerisque mi, vitae sollicitudin ex
-              tortor a dolor. Vestibulum ante ipsum primis in faucibus orci
-              luctus et ultrices posuere cubilia Curae;
+              We are a new and growing student organization dedicated to exploring new subjects and topics throughout
+              multiple fields including computer science, graphic design, web development, animation, and game
+              development. This is a multi-disciplinary student organization that seeks to expand and utilize knowledge
+              that we have gained to create and develop useful projects.
             </p>
           </Container>
         </Jumbotron>
@@ -196,53 +189,49 @@ export default class Home extends Component {
               <CardImg
                 top
                 width="100%"
-                src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                src="https://images.unsplash.com/photo-1484504110495-939e9baca603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                <CardTitle className="card-title text-center">About Us</CardTitle>
+                <CardSubtitle className="card-subtitle">Find Out More</CardSubtitle>
+                <CardText className="card-text">
+                  We are a new student organization that is committed to learning and providing creative outlets to use
+                  what you have learned.
                 </CardText>
-                <Button>Button</Button>
+                <Button className="card-button">View</Button>
               </CardBody>
             </Card>
             <Card>
               <CardImg
                 top
                 width="100%"
-                src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                src="https://images.unsplash.com/photo-1484504110495-939e9baca603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>
-                  This card has supporting text below as a natural lead-in to
-                  additional content.
+                <CardTitle className="card-title text-center">Our Projects</CardTitle>
+                <CardSubtitle className="card-subtitle">Find Out More</CardSubtitle>
+                <CardText className="card-text">
+                  We are working on a few projects right now that encompass multiple fields of study.
                 </CardText>
-                <Button>Button</Button>
+                <Button className="card-button">View</Button>
               </CardBody>
             </Card>
             <Card>
               <CardImg
                 top
                 width="100%"
-                src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+                src="https://images.unsplash.com/photo-1484504110495-939e9baca603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This card has even longer
-                  content than the first to show that equal height action.
+                <CardTitle className="card-title text-center">Join Us</CardTitle>
+                <CardSubtitle className="card-subtitle">Find Out More</CardSubtitle>
+                <CardText className="card-text">
+                  We are always accepting new members! Contact Us to find out more.
                 </CardText>
-                <Button>Button</Button>
+                <Button className="card-button">View</Button>
               </CardBody>
             </Card>
           </CardDeck>

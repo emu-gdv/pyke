@@ -3,9 +3,6 @@ import ".//about.scss";
 import { Col, Container, Row } from "reactstrap";
 
 export default class About extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

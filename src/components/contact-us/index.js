@@ -3,9 +3,6 @@ import { Button, Col, Container, Form, FormFeedback, FormGroup, Input, Label, Ro
 import ".//contact.scss";
 
 export default class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

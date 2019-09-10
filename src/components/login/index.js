@@ -1,13 +1,10 @@
 import React from "react";
-import { Container, Row, Form, FormGroup, Input, Button } from "reactstrap";
+import { Button, Container, Form, FormGroup, Input, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import g_logo from "../../assets/images/google/g-logo.png";
 import ".//login.scss";
 
 export default class Login extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

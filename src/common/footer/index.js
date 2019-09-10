@@ -1,12 +1,9 @@
 import React from "react";
 import ".//footer.scss";
-import { Container, Row, Col } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 
 export default class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
@@ -14,7 +11,7 @@ export default class Footer extends React.Component {
         <Container fluid>
           <Row className="pt-3 pb-3">
             <Col sm="3">
-              <h5 className="text-center">Menu</h5>
+              <h5 className="text-center">Quick Links</h5>
               <ul>
                 <li>
                   <Link exact to="/">
@@ -32,21 +29,21 @@ export default class Footer extends React.Component {
                   </Link>
                 </li>
                 <li>
-                  <Link />
+                  <Link/>
                 </li>
                 <li>
-                  <Link />
+                  <Link/>
                 </li>
               </ul>
-            </Col>
-            <Col sm="3">
-              <h5 className="text-center">Connect</h5>
             </Col>
             <Col sm="3">
               <h5 className="text-center">Contact Us</h5>
             </Col>
             <Col sm="3">
-              <h5 className="text-center">Join Today</h5>
+              <h5 className="text-center">Members</h5>
+            </Col>
+            <Col sm="3">
+              <h5 className="text-center">Connect</h5>
             </Col>
           </Row>
         </Container>

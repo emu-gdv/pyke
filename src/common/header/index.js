@@ -44,7 +44,7 @@ export default class Header extends React.Component {
               className="d-inline-block align-top"
             />
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarToggler onClick={this.toggle}/>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
@@ -86,7 +86,7 @@ export default class Header extends React.Component {
                       </NavLink>
                     </NavItem>
                   </DropdownItem>
-                  <DropdownItem divider />
+                  <DropdownItem divider/>
                   <DropdownItem>
                     <NavItem>
                       <NavLink tag={Link} exact to="/logout">

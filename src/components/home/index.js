@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import ".//home.scss";
 import {
+  Button,
+  Card,
+  CardBody,
+  CardDeck,
+  CardImg,
+  CardSubtitle,
+  CardText,
+  CardTitle,
   Carousel,
   CarouselCaption,
   CarouselControl,
@@ -9,17 +17,9 @@ import {
   Col,
   Container,
   Jumbotron,
-  Row,
-  CardDeck,
-  Card,
-  CardBody,
-  CardImg,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  Button,
   ListGroup,
   ListGroupItem,
+  Row,
   Table
 } from "reactstrap";
 
@@ -200,7 +200,7 @@ export default class Home extends Component {
         <Container className="mt-4 home-leaderboard">
           <Row>
             <Col sm="12">
-              <h3 className="text-center mb-5">Commit Leaderboards</h3>
+              <h3 className="text-center mb-5">Commit Leaderboard</h3>
             </Col>
           </Row>
           <Row>
@@ -236,8 +236,6 @@ export default class Home extends Component {
             </Table>
           </Row>
         </Container>
-
-
         <Jumbotron fluid className="text-center mt-5 home-jumbo">
           <Container fluid>
             <h1 className="display-1 center">Fluid jumbotron</h1>

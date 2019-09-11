@@ -134,7 +134,12 @@ export default class Home extends Component {
           </Row>
         </Container>
         <Container className="home-cards">
-          <CardDeck className="pt-5">
+          <Row>
+            <Col className="sm-12 pt-3">
+              <h3 className="home-cards-title text-center">Pyke Development</h3>
+            </Col>
+          </Row>
+          <CardDeck className="pt-3">
             <Card>
               <CardImg
                 top
@@ -143,8 +148,8 @@ export default class Home extends Component {
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle className="card-title text-center">About Us</CardTitle>
-                <CardSubtitle className="card-subtitle">Find Out More</CardSubtitle>
+                <CardTitle className="card-title text-center h5">About Us</CardTitle>
+                <CardSubtitle className="card-subtitle h6 pt-2">SubText:</CardSubtitle>
                 <CardText className="card-text">
                   We are a new student organization that is committed to learning and providing creative outlets to use
                   what you have learned.
@@ -160,8 +165,8 @@ export default class Home extends Component {
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle className="card-title text-center">Our Projects</CardTitle>
-                <CardSubtitle className="card-subtitle">Find Out More</CardSubtitle>
+                <CardTitle className="card-title text-center h5">Our Projects</CardTitle>
+                <CardSubtitle className="card-subtitle h6 pt-2">SubText:</CardSubtitle>
                 <CardText className="card-text">
                   We are working on a few projects right now that encompass multiple fields of study.
                 </CardText>
@@ -176,8 +181,8 @@ export default class Home extends Component {
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle className="card-title text-center">Join Us</CardTitle>
-                <CardSubtitle className="card-subtitle">Find Out More</CardSubtitle>
+                <CardTitle className="card-title text-center h5">Join Us</CardTitle>
+                <CardSubtitle className="card-subtitle h6 pt-2">SubText</CardSubtitle>
                 <CardText className="card-text">
                   We are always accepting new members! Contact Us to find out more.
                 </CardText>

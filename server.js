@@ -13,6 +13,9 @@ const session = require("express-session");
 const port = process.env.PORT || 3000;
 const app = express();
 
+const history = require("connect-history-api-fallback");
+app.use(history());
+
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));
 
@@ -29,7 +32,7 @@ app.use(cookieParser());
 
 // Express Session
 app.use(session({
-  secret: 'secret',
+  secret: "secret",
   saveUninitialized: true,
   resave: true
 }));
@@ -42,6 +45,4 @@ Passport JS Section
  */
 
 
-
-
-app.listen(port, () => console.log('Express App Listening on ' + port.toString()));
+app.listen(port, () => console.log("Express App Listening on " + port.toString()));

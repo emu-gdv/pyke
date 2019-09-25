@@ -13,6 +13,10 @@ const session = require("express-session");
 const port = process.env.PORT || 3000;
 const app = express();
 
+const history = require("connect-history-api-fallback");
+
+app.use(history());
+
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));
 

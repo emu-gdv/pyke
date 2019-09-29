@@ -6,6 +6,10 @@
 
   .carousel-item {
     height: 40rem;
+
+    img {
+      width: 100%;
+    }
   }
 
   .carousel-caption {
@@ -26,4 +30,8 @@
   p {
     font-size: 1.25rem;
   }
+}
+
+.card-text-height {
+  height: 5rem;
 }

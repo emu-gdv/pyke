@@ -3,9 +3,6 @@ import ".//about.scss";
 import { Col, Container, Row } from "reactstrap";
 
 export default class About extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
@@ -18,7 +15,7 @@ export default class About extends Component {
           </Col>
 
           <Col sm={8}>
-            <h2>Projects</h2>
+            <h2>Mission Statement</h2>
           </Col>
           <Col sm={4}>
             <h2>Goals</h2>

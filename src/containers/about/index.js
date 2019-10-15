@@ -5,9 +5,6 @@ import Footer from "../../common/footer";
 import About from "../../components/about";
 
 export default class AboutContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

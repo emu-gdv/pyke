@@ -2,15 +2,15 @@ import React from "react";
 
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import GetStarted from "../../components/get-started";
+import Join from "../../components/join";
 
-export default class GetStartedContainer extends React.Component {
+export default class JoinContainer extends React.Component {
 
   render() {
     return (
       <React.Fragment>
         <Header/>
-        <GetStarted/>
+        <Join/>
         <Footer/>
       </React.Fragment>
     );

@@ -1,18 +1,8 @@
 import React from "react";
-import { Container, ListGroup, ListGroupItem, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Col, Container, Row } from "reactstrap";
 import ".//dashboard.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
-import { faFolder } from "@fortawesome/free-solid-svg-icons/faFolder";
-import { faDog } from "@fortawesome/free-solid-svg-icons/faDog";
-import { faTrash } from "@fortawesome/free-solid-svg-icons/faTrash";
-import { faFighterJet } from "@fortawesome/free-solid-svg-icons/faFighterJet";
 
 export default class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

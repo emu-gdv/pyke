@@ -5,12 +5,9 @@ import { ListGroup, ListGroupItem, UncontrolledAlert } from "reactstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
-import { faDog, faFolder, faTrash, faFighterJet } from "@fortawesome/free-solid-svg-icons/";
+import { faDog, faFighterJet, faFolder, faTrash } from "@fortawesome/free-solid-svg-icons/";
 
 export default class DashboardSidebar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

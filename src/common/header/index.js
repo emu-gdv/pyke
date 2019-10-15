@@ -44,22 +44,32 @@ export default class Header extends React.Component {
               className="d-inline-block align-top"
             />
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarToggler onClick={this.toggle}/>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} exact to="/info">
-                  Info
+                <NavLink tag={Link} exact to="/about-us">
+                  About Us
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} exact to="/projects">
+                  Projects
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} exact to="/get-started">
-                  Get Started
+                  Getting Started
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} exact to="/about-us">
-                  About Us
+                <NavLink tag={Link} exact to="/join-now">
+                  Join Now
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} exact to="/meeting-notes">
+                  Meeting Notes
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -67,35 +77,35 @@ export default class Header extends React.Component {
                   Contact Us
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Members
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    <NavItem>
-                      <NavLink tag={Link} exact to="/login">
-                        Login
-                      </NavLink>
-                    </NavItem>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <NavItem>
-                      <NavLink tag={Link} exact to="/dashboard">
-                        Dashboard
-                      </NavLink>
-                    </NavItem>
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    <NavItem>
-                      <NavLink tag={Link} exact to="/logout">
-                        Logout
-                      </NavLink>
-                    </NavItem>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              {/* <UncontrolledDropdown nav inNavbar> */}
+              {/*  <DropdownToggle nav caret> */}
+              {/*    Members */}
+              {/*  </DropdownToggle> */}
+              {/*  <DropdownMenu right> */}
+              {/*    <DropdownItem> */}
+              {/*      <NavItem> */}
+              {/*        <NavLink tag={Link} exact to="/login"> */}
+              {/*          Login */}
+              {/*        </NavLink> */}
+              {/*      </NavItem> */}
+              {/*    </DropdownItem> */}
+              {/*    <DropdownItem> */}
+              {/*      <NavItem> */}
+              {/*        <NavLink tag={Link} exact to="/dashboard"> */}
+              {/*          Dashboard */}
+              {/*        </NavLink> */}
+              {/*      </NavItem> */}
+              {/*    </DropdownItem> */}
+              {/*    <DropdownItem divider/> */}
+              {/*    <DropdownItem> */}
+              {/*      <NavItem> */}
+              {/*        <NavLink tag={Link} exact to="/logout"> */}
+              {/*          Logout */}
+              {/*        </NavLink> */}
+              {/*      </NavItem> */}
+              {/*    </DropdownItem> */}
+              {/*  </DropdownMenu> */}
+              {/* </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </Navbar>

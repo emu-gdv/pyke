@@ -1,20 +1,17 @@
 import React from "react";
 import ".//footer.scss";
-import { Container, Row, Col } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 
 export default class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
-      <footer className="mt-5 bg-light">
+      <footer className="bg-light">
         <Container fluid>
           <Row className="pt-3 pb-3">
             <Col sm="3">
-              <h5 className="text-center">Menu</h5>
+              <h5 className="text-center">Quick Links</h5>
               <ul>
                 <li>
                   <Link exact to="/">
@@ -27,26 +24,44 @@ export default class Footer extends React.Component {
                   </Link>
                 </li>
                 <li>
-                  <Link exact to="/info">
-                    Info
+                  <Link exact to="/projects">
+                    Projects
                   </Link>
                 </li>
                 <li>
-                  <Link />
+                  <Link exact to="/get-started">
+                    Getting Started
+                  </Link>
                 </li>
                 <li>
-                  <Link />
+                  <Link exact to="/meeting-notes">
+                    Meeting Notes
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+            <Col sm="3">
+              <h5 className="text-center">How to Reach Us</h5>
+              <ul>
+                <li>
+                  <Link exact to="/contact-us">
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link exact to="/join-now">
+                    Join Today
+                  </Link>
                 </li>
               </ul>
             </Col>
             <Col sm="3">
               <h5 className="text-center">Connect</h5>
+              <p className="text-center">Social Media Coming Soon</p>
             </Col>
             <Col sm="3">
-              <h5 className="text-center">Contact Us</h5>
-            </Col>
-            <Col sm="3">
-              <h5 className="text-center">Join Today</h5>
+              <h5 className="text-center">Members</h5>
+              <p className="text-center">Member Services Coming Soon</p>
             </Col>
           </Row>
         </Container>

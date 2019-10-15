@@ -2,15 +2,15 @@ import React from "react";
 
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import GetStarted from "../../components/get-started";
+import MeetingNotes from "../../components/meeting-notes";
 
-export default class GetStartedContainer extends React.Component {
+export default class MeetingNotesContainer extends React.Component {
 
   render() {
     return (
       <React.Fragment>
         <Header/>
-        <GetStarted/>
+        <MeetingNotes/>
         <Footer/>
       </React.Fragment>
     );

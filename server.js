@@ -12,6 +12,11 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const port = process.env.PORT || 3000;
 const app = express();
+const subdomain = require('express-subdomain');
+const router = express.Router();
+
+const history = require("connect-history-api-fallback");
+app.use(history());
 
 const history = require("connect-history-api-fallback");
 
@@ -31,9 +36,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// Sub Domain
+app.use(subdomain('dev, router'));
+
 // Express Session
 app.use(session({
-  secret: 'secret',
+  secret: "secret",
   saveUninitialized: true,
   resave: true
 }));
@@ -46,6 +54,4 @@ Passport JS Section
  */
 
 
-
-
-app.listen(port, () => console.log('Express App Listening on ' + port.toString()));
+app.listen(port, () => console.log("Express App Listening on " + port.toString()));

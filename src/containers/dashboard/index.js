@@ -1,24 +1,22 @@
 import React from "react";
 
-import {Container, Row, Col} from 'reactstrap';
+import { Col, Container, Row } from "reactstrap";
 
 import Dashboard from "../../components/dashboard";
 import DashboardHeader from "../../common/dashboard-header";
 import DashboardSidebar from "../../components/dashboard-sidebar";
 
 export default class DashboardContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   render() {
     return (
       <React.Fragment>
-        <DashboardHeader />
+        <DashboardHeader/>
         <Container fluid>
           <Row>
             <DashboardSidebar/>
             <Col>
-              <Dashboard />
+              <Dashboard/>
             </Col>
           </Row>
         </Container>

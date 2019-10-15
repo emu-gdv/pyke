@@ -10,8 +10,8 @@ const User = require("../models/user");
 passport.use(
   new GoogleStrategy(
     {
-      clientID: process.env["OAUTH_ID"],
-      clientSecret: process.env["OAUTH_SECRET"],
+      clientID: process.env.OAUTH_ID,
+      clientSecret: process.env.OAUTH_SECRET,
       callbackURL: "/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done) {
@@ -26,7 +26,7 @@ passport.use(
           newUser.google.id = profile.id;
           newUser.google.token = accessToken;
           newUser.google.name = profile.displayName;
-          if (typeof profile.emails != "undefined" && profile.emails.length > 0)
+          if (typeof profile.emails !== "undefined" && profile.emails.length > 0)
             newUser.google.email = profile.emails[0].value;
 
           // save our user to the database

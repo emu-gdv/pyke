@@ -21,8 +21,20 @@ const config = {
         exclude: /\.module\.css$/
       },
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass"),
+              sassOptions: {
+                fiber: false
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.png$/,

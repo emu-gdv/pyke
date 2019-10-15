@@ -12,8 +12,6 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const port = process.env.PORT || 3000;
 const app = express();
-const subdomain = require('express-subdomain');
-const router = express.Router();
 
 const history = require("connect-history-api-fallback");
 app.use(history());
@@ -35,9 +33,6 @@ const passport = require("passport");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-// Sub Domain
-app.use(subdomain('dev, router'));
 
 // Express Session
 app.use(session({

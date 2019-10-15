@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Sub Domain
-app.use(subdomain('api, router'));
+app.use(subdomain('dev, router'));
 
 // Express Session
 app.use(session({

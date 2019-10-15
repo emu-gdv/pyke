@@ -2,16 +2,16 @@ import React from "react";
 
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import Info from "../../components/info";
+import Projects from "../../components/projects";
 
-export default class InfoContainer extends React.Component {
+export default class ProjectsContainer extends React.Component {
 
   render() {
     return (
       <React.Fragment>
-        <Header />
-        <Info />
-        <Footer />
+        <Header/>
+        <Projects/>
+        <Footer/>
       </React.Fragment>
     );
   }

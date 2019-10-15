@@ -22,23 +22,29 @@ import {
   Row,
   Table
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 
 const items = [
   {
-    src: require("../../assets/images/home/web_dev.png"),
-    altText: "Web Development",
-    caption: "Project teaching React & Webpack, Devops, and CI"
+    src: require("../../assets/images/home/software_dev.jpg"),
+    altText: "Software Development",
+    caption: "Collaborate with other students, mentors, and community professionals while developing and learning new skills"
+  },
+  {
+    src: require("../../assets/images/home/software_dev.jpg"),
+    altText: "Recruiting Artists",
+    caption: "Are you an Artist or Designer? Consider joining to help with project prototypes, mock-ups, and game design"
   },
   {
     src: require("../../assets/images/home/game_dev.png"),
     altText: "Game Development",
-    caption: "Projects using Unity to create modern game designs"
+    caption: "Help design, develop, and implement games in Unity. Learn game development and contribute at any level"
   },
   {
-    src: require("../../assets/images/home/software_dev.jpg"),
-    altText: "Software Development",
-    caption: "Projects involving Java, exploring advanced concepts"
+    src: require("../../assets/images/home/web_dev.png"),
+    altText: "Web Development",
+    caption: "Learn various aspects of Web Development, web design, and web-app development"
   }
 ];
 
@@ -136,7 +142,7 @@ export default class Home extends Component {
         <Container className="home-cards">
           <Row>
             <Col className="sm-12 pt-3">
-              <h3 className="home-cards-title text-center">Pyke Development</h3>
+              <h3 className="home-cards-title text-center">SGW Development</h3>
             </Col>
           </Row>
           <CardDeck className="pt-3">
@@ -148,13 +154,17 @@ export default class Home extends Component {
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle className="card-title text-center h5">About Us</CardTitle>
-                <CardSubtitle className="card-subtitle h6 pt-2">SubText:</CardSubtitle>
-                <CardText className="card-text">
-                  We are a new student organization that is committed to learning and providing creative outlets to use
-                  what you have learned.
+                <CardTitle className="card-title text-center h5">Our Team</CardTitle>
+                <CardSubtitle className="card-subtitle h6 pt-2">About Us:</CardSubtitle>
+                <CardText className="card-text-height text-center">
+                  Our Student organization is an ambitious group of students from EMU who collaborate together on
+                  passion projects, as well as learning new skills
                 </CardText>
-                <Button className="card-button">View</Button>
+                <Button className="card-button d-block m-auto">
+                  <Link exact to="/about-us">
+                    Learn More
+                  </Link>
+                </Button>
               </CardBody>
             </Card>
             <Card>
@@ -165,12 +175,17 @@ export default class Home extends Component {
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle className="card-title text-center h5">Our Projects</CardTitle>
-                <CardSubtitle className="card-subtitle h6 pt-2">SubText:</CardSubtitle>
-                <CardText className="card-text">
-                  We are working on a few projects right now that encompass multiple fields of study.
+                <CardTitle className="card-title text-center h5">Projects</CardTitle>
+                <CardSubtitle className="card-subtitle h6 pt-2">Current:</CardSubtitle>
+                <CardText className="card-text-height text-center">
+                  We are engaged in a multitude of projects, spanning multiple disciplines. See what we are up to
+                  currently!
                 </CardText>
-                <Button className="card-button">View</Button>
+                <Button className="card-button d-block m-auto">
+                  <Link exact to="/projects">
+                    See Projects
+                  </Link>
+                </Button>
               </CardBody>
             </Card>
             <Card>
@@ -181,12 +196,17 @@ export default class Home extends Component {
                 alt="Card image cap"
               />
               <CardBody>
-                <CardTitle className="card-title text-center h5">Join Us</CardTitle>
-                <CardSubtitle className="card-subtitle h6 pt-2">SubText</CardSubtitle>
-                <CardText className="card-text">
-                  We are always accepting new members! Contact Us to find out more.
+                <CardTitle className="card-title text-center h5">Join Our Team</CardTitle>
+                <CardSubtitle className="card-subtitle h6 pt-2">Contact Us:</CardSubtitle>
+                <CardText className="card-text-height text-center">
+                  We are always accepting new members, regardless of skill level. Follow the link to join our Student
+                  Organization
                 </CardText>
-                <Button className="card-button">View</Button>
+                <Button className="card-button d-block m-auto">
+                  <Link exact to="/join-now">
+                    Join Now
+                  </Link>
+                </Button>
               </CardBody>
             </Card>
           </CardDeck>
@@ -198,70 +218,53 @@ export default class Home extends Component {
               We are a new and growing student organization dedicated to exploring new subjects and topics throughout
               multiple fields including computer science, graphic design, web development, animation, and game
               development. This is a multi-disciplinary student organization that seeks to expand and utilize knowledge
-              that we have gained to create and develop useful projects.
+              that we have gained to create and develop useful projects. We work with industry professionals to provide
+              networking, mentorship programs, symposium events, and possible internships.
             </p>
           </Container>
         </Jumbotron>
-        <Container className="mt-4 home-leaderboard">
-          <Row>
-            <Col sm="12">
-              <h3 className="text-center mb-5">Commit Leaderboard</h3>
-            </Col>
-          </Row>
-          <Row>
-            <Table dark>
-              <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Commit #</th>
-                <th>Github User</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>432</td>
-                <td>taco-cat</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jessica</td>
-                <td>380</td>
-                <td>pocket-type</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>263</td>
-                <td>fire-spill</td>
-              </tr>
-              </tbody>
-            </Table>
-          </Row>
-        </Container>
-        <Jumbotron fluid className="text-center mt-5 home-jumbo">
-          <Container fluid>
-            <h1 className="display-1 center">Fluid jumbotron</h1>
-            <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              iaculis quam id rhoncus congue. Donec ut accumsan nisl, vitae
-              fermentum enim. Nullam tristique rutrum orci, at placerat urna
-              blandit a. Donec id auctor quam, quis placerat ligula. Quisque
-              ultrices augue vel viverra hendrerit. Donec ornare odio et tortor
-              volutpat gravida. Morbi at justo magna. Nulla est mauris, dictum
-              ut neque a, venenatis accumsan leo. Integer eu quam eget turpis
-              vestibulum porttitor quis in sem. Aenean malesuada, eros porta
-              viverra pretium, dui diam scelerisque mi, vitae sollicitudin ex
-              tortor a dolor. Vestibulum ante ipsum primis in faucibus orci
-              luctus et ultrices posuere cubilia Curae;
-            </p>
-          </Container>
-        </Jumbotron>
+        {/* <Container className="mt-4 home-leaderboard"> */}
+        {/*  <Row> */}
+        {/*    <Col sm="12"> */}
+        {/*      <h3 className="text-center mb-5">Commit Leaderboard</h3> */}
+        {/*    </Col> */}
+        {/*  </Row> */}
+        {/*  <Row> */}
+        {/*    <Table dark> */}
+        {/*      <thead> */}
+        {/*        <tr> */}
+        {/*          <th>#</th> */}
+        {/*          <th>First Name</th> */}
+        {/*          <th>Commit #</th> */}
+        {/*          <th>Github User</th> */}
+        {/*        </tr> */}
+        {/*      </thead> */}
+        {/*      <tbody> */}
+        {/*        <tr> */}
+        {/*          <th scope="row">1</th> */}
+        {/*          <td>Mark</td> */}
+        {/*          <td>432</td> */}
+        {/*          <td>taco-cat</td> */}
+        {/*        </tr> */}
+        {/*        <tr> */}
+        {/*          <th scope="row">2</th> */}
+        {/*          <td>Jessica</td> */}
+        {/*          <td>380</td> */}
+        {/*          <td>pocket-type</td> */}
+        {/*        </tr> */}
+        {/*        <tr> */}
+        {/*          <th scope="row">3</th> */}
+        {/*          <td>Larry</td> */}
+        {/*          <td>263</td> */}
+        {/*          <td>fire-spill</td> */}
+        {/*        </tr> */}
+        {/*      </tbody> */}
+        {/*    </Table> */}
+        {/*  </Row> */}
+        {/* </Container> */}
         <Container className="pt-5 home-list">
           <ListGroup flush>
-            <ListGroupItem disabled tag="a" href="#">
+            <ListGroupItem tag="a" href="#">
               Cras justo odio
             </ListGroupItem>
             <ListGroupItem tag="a" href="#">
@@ -278,6 +281,24 @@ export default class Home extends Component {
             </ListGroupItem>
           </ListGroup>
         </Container>
+        <Jumbotron fluid className="text-center mt-5 home-jumbo">
+          <Container fluid>
+            <h1 className="display-1 center">Our Mission</h1>
+            <p className="lead">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              iaculis quam id rhoncus congue. Donec ut accumsan nisl, vitae
+              fermentum enim. Nullam tristique rutrum orci, at placerat urna
+              blandit a. Donec id auctor quam, quis placerat ligula. Quisque
+              ultrices augue vel viverra hendrerit. Donec ornare odio et tortor
+              volutpat gravida. Morbi at justo magna. Nulla est mauris, dictum
+              ut neque a, venenatis accumsan leo. Integer eu quam eget turpis
+              vestibulum porttitor quis in sem. Aenean malesuada, eros porta
+              viverra pretium, dui diam scelerisque mi, vitae sollicitudin ex
+              tortor a dolor. Vestibulum ante ipsum primis in faucibus orci
+              luctus et ultrices posuere cubilia Curae;
+            </p>
+          </Container>
+        </Jumbotron>
       </React.Fragment>
     );
   }

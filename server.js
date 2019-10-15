@@ -18,6 +18,10 @@ const router = express.Router();
 const history = require("connect-history-api-fallback");
 app.use(history());
 
+const history = require("connect-history-api-fallback");
+
+app.use(history());
+
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));
 

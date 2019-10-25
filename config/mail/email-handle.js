@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: DOMAIN});
 
-app.post('/email-handle.js', (req, res, next) => {
+app.post('/config/mail/email-handle.js', (req, res, next) => {
   const servername = '';
   const options = {};
 

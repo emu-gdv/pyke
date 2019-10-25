@@ -1,41 +1,28 @@
-const mailgun = require("mailgun-js");
-const DOMAIN = 'dev.sgwdev.org';
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
+const Mailgun = require("mailgun-js");
+const nodemailer = require("nodemailer");
+const nodemailerTransport = require("nodemailer-mailgun-transport");
 
+const auth = {
+  auth: {
+    api_key: process.env.MAILGUN_API_KEY,
+    domain: "dev.sgwdev.org"
+  }
+};
+
+const nodemailerMailgun = nodemailer.createTransport(nodemailerTransport(auth));
 const app = express();
-
-// Parse form data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-
-const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: DOMAIN});
-
-app.get('/config/mail/email-handle.js', (req, res, next) => {
-  const servername = '';
-  const options = {};
-
-  mg.sendText(
-    // From
-    process.env.MAILGUN_FROM_EMAIL,
-    // To
-    req.body.email,
-    // Subject
-    'Contact Form Submission',
-    // Body
-    'Testing Mailgun',
-    servername,
-    options,
-    err => {
-      if (err) {
-        next(err);
-        return;
-      }
-      // Render the index route on success
-      res.render('/thank-you', {
-        sent: true
-      });
+app.post("/config/mail/email-handle", (req, res) => {
+  nodemailerMailgun.sendMail({
+    from: req.body.email,
+    to: "mwilkes@emich.edu",
+    subject: req.body.subject, html: `<p>$ {req.body.message }</p>`,
+    text: "Mailgun rocks, pow pow!"
+  }, function(err, info) {
+    if (err) {
+      console.log("Error: " + err);
+    } else {
+      console.log("Response: " + info);
     }
-  );
+  });
 });

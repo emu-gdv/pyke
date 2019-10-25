@@ -12,7 +12,8 @@ const auth = {
 
 const nodemailerMailgun = nodemailer.createTransport(nodemailerTransport(auth));
 const app = express();
-app.post("/config/mail/email-handle", (req, res) => {
+
+app.post("/config/mail/email-handle.js", (req, res) => {
   nodemailerMailgun.sendMail({
     from: req.body.email,
     to: "mwilkes@emich.edu",

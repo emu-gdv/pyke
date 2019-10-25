@@ -11,7 +11,7 @@ const path = require("path");
 // const bodyParser = require("body-parser");
 // const cookieParser = require("cookie-parser");
 // const session = require("express-session");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 const app = express();
 
 const history = require("connect-history-api-fallback");

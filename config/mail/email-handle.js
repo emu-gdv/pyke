@@ -1,7 +1,6 @@
 const mailgun = require("mailgun-js");
 const DOMAIN = 'dev.sgwdev.org';
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -18,7 +17,7 @@ app.post('/email-handle.js', (req, res, next) => {
 
   mg.sendText(
     // From
-    'info@dev.sgwdev.org',
+    process.env.MAILGUN_FROM_EMAIL,
     // To
     req.body.email,
     // Subject
@@ -27,7 +26,7 @@ app.post('/email-handle.js', (req, res, next) => {
     'Testing Mailgun',
     servername,
     options,
-    (err) => {
+    err => {
       if (err) {
         next(err);
         return;

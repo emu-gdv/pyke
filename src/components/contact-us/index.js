@@ -15,7 +15,7 @@ export default class Contact extends React.Component {
             <p>Sub Heading Text</p>
           </Col>
           <Col sm={8}>
-            <Form method="POST" action="/email-handle.js">
+            <Form method="POST" action="../../../config/mail/email_handle.js">
               <FormGroup>
                 <Label className="mb-2 mr-2" for="name">Name</Label>
                 <Input className="mb-2" type="text" name="name" id="name" placeholder="John Smith"/>

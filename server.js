@@ -2,7 +2,7 @@ require("dotenv").config();
 // require("./config/passport-strategies/local");
 // require("./config/passport-strategies/google-oauth");
 // require("./config/passport-strategies/github-oauth");
-require("./config/routes/routes");
+// require("./config/routes/routes");
 // require("./config/models/user");
 require("./config/mail/email-handle");
 
@@ -45,5 +45,8 @@ app.use(express.static(path.join(__dirname, "dist")));
 // Passport JS Section
 //  */
 
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 app.listen(port, () => console.log("Express App Listening on " + port.toString()));

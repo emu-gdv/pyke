@@ -7,9 +7,6 @@ const app = express();
 
 const mg = new Mailgun(process.env.MAILGUN_API_KEY);
 
-// Setup view engine
-app.set("view engine", "pug");
-
 // Parse form data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

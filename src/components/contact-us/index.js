@@ -36,7 +36,7 @@ export default class Contact extends React.Component {
             <p>Sub Heading Text</p>
           </Col>
           <Col sm={8}>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} method="post">
               {this.emailNotification(message)}
               <FormGroup>
                 <Label className="mb-2 mr-2" for="name">Name</Label>

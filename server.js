@@ -4,7 +4,7 @@ require("dotenv").config();
 // require("./config/passport-strategies/github-oauth");
 require("./config/routes/routes");
 // require("./config/models/user");
-require("./config/mail/email_handle");
+require("./config/mail/email-handle");
 
 const express = require("express");
 const path = require("path");

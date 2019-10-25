@@ -1,42 +1,14 @@
-const express = require("express");
-const Mailgun = require("mailgun-js");
-const path = require("path");
-const bodyParser = require("body-parser");
+const API_KEY = 'YOUR_API_KEY';
+const DOMAIN = 'YOUR_DOMAIN_NAME';
+const mailgun = require('mailgun-js')({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN});
 
-const app = express();
+const data = {
+  from: 'Excited User <me@samples.mailgun.org>',
+  to: 'foo@example.com, bar@example.com',
+  subject: 'Hello',
+  text: 'Testing some Mailgun awesomeness!'
+};
 
-const mg = new Mailgun(process.env.MAILGUN_API_KEY);
-
-// Parse form data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-app.get("/", (req, res) => res.render("index"));
-
-app.post("/contact-us", (req, res, next) => {
-  const servername = "";
-  const options = {};
-
-  mg.sendText(
-    // From
-    "info@sgwdev.org",
-    // To
-    req.body.email,
-    // Subject
-    "Test Email",
-    // Body
-    "Mailgun on App Engine with Node.js",
-    servername,
-    options,
-    err => {
-      if (err) {
-        next(err);
-        return;
-      }
-      // Render the index route on success
-      res.render("index", {
-        sent: true
-      });
-    }
-  );
+mailgun.messages().send(data, (error, body) => {
+  console.log(body);
 });

@@ -5,6 +5,7 @@ import ".//contact.scss";
 export default class Contact extends React.Component {
 
   emailNotification = message => {
+
     switch (message) {
     case 200:
       return <Alert color="warning">

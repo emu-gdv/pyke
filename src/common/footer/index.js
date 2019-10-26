@@ -64,7 +64,7 @@ export default class Footer extends React.Component {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/sgwdev/">
+                  <a target="_blank" href="https://www.instagram.com/sgwdev/">
                     Instagram
                   </a>
                 </li>

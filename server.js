@@ -17,7 +17,6 @@ const app = express();
 const history = require("connect-history-api-fallback");
 app.use(history());
 
-app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "dist")));
 
 // const mongoose = require("mongoose");
@@ -45,7 +44,7 @@ app.use(express.static(path.join(__dirname, "dist")));
 // Passport JS Section
 //  */
 
-app.get("/*", function(req, res) {
+app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 

@@ -59,19 +59,19 @@ export default class Footer extends React.Component {
               <h5 className="text-center">Connect</h5>
               <ul>
                 <li>
-                  <Link exact to="https://www.facebook.com/groups/817241408710942/">
+                  <a  target="_blank" href="https://www.facebook.com/groups/817241408710942/">
                     Facebook
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link exact to="https://www.instagram.com/sgwdev/">
+                  <a href="https://www.instagram.com/sgwdev/">
                     Instagram
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link exact to="https://twitter.com/SGWDev">
+                  <a target="_blank" href="https://twitter.com/SGWDev/">
                     Twitter
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </Col>

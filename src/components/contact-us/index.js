@@ -5,7 +5,6 @@ import ".//contact.scss";
 export default class Contact extends React.Component {
 
   emailNotification = message => {
-
     switch (message) {
     case 200:
       return <Alert color="warning">
@@ -25,7 +24,7 @@ export default class Contact extends React.Component {
 
   render() {
 
-    const { handleSubmit, message } = this.props;
+    const message = this.props;
 
     return (
       <Container>
@@ -37,7 +36,7 @@ export default class Contact extends React.Component {
             <p>Sub Heading Text</p>
           </Col>
           <Col sm={8}>
-            <Form method="POST" onSubmit={handleSubmit} >
+            <Form action="/contact-us" method="post">
               {this.emailNotification(message)}
               <FormGroup>
                 <Label className="mb-2 mr-2" for="name">Name</Label>

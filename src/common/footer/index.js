@@ -7,7 +7,7 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="bg-light footer">
+      <footer className="bg-light footer mt-auto">
         <Container fluid>
           <Row className="pt-3 pb-3">
             <Col sm="3">

@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
           <Row className="pt-3 pb-3">
             <Col sm="3">
               <h5 className="text-center">Quick Links</h5>
-              <ul>
+              <ul className="text-center list">
                 <li>
                   <Link exact to="/">
                     Home

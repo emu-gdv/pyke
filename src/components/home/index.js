@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ".//home.scss";
+import home_left from "../../assets/images/home/home_left.png";
+import home_right from "../../assets/images/home/home_right.png";
 import {
   Button,
   Card,
@@ -223,63 +225,16 @@ export default class Home extends Component {
             </p>
           </Container>
         </Jumbotron>
-        {/* <Container className="mt-4 home-leaderboard"> */}
-        {/*  <Row> */}
-        {/*    <Col sm="12"> */}
-        {/*      <h3 className="text-center mb-5">Commit Leaderboard</h3> */}
-        {/*    </Col> */}
-        {/*  </Row> */}
-        {/*  <Row> */}
-        {/*    <Table dark> */}
-        {/*      <thead> */}
-        {/*        <tr> */}
-        {/*          <th>#</th> */}
-        {/*          <th>First Name</th> */}
-        {/*          <th>Commit #</th> */}
-        {/*          <th>Github User</th> */}
-        {/*        </tr> */}
-        {/*      </thead> */}
-        {/*      <tbody> */}
-        {/*        <tr> */}
-        {/*          <th scope="row">1</th> */}
-        {/*          <td>Mark</td> */}
-        {/*          <td>432</td> */}
-        {/*          <td>taco-cat</td> */}
-        {/*        </tr> */}
-        {/*        <tr> */}
-        {/*          <th scope="row">2</th> */}
-        {/*          <td>Jessica</td> */}
-        {/*          <td>380</td> */}
-        {/*          <td>pocket-type</td> */}
-        {/*        </tr> */}
-        {/*        <tr> */}
-        {/*          <th scope="row">3</th> */}
-        {/*          <td>Larry</td> */}
-        {/*          <td>263</td> */}
-        {/*          <td>fire-spill</td> */}
-        {/*        </tr> */}
-        {/*      </tbody> */}
-        {/*    </Table> */}
-        {/*  </Row> */}
-        {/* </Container> */}
-        <Container className="pt-5 home-list">
-          <ListGroup flush>
-            <ListGroupItem tag="a" href="#">
-              Cras justo odio
-            </ListGroupItem>
-            <ListGroupItem tag="a" href="#">
-              Dapibus ac facilisis in
-            </ListGroupItem>
-            <ListGroupItem tag="a" href="#">
-              Morbi leo risus
-            </ListGroupItem>
-            <ListGroupItem tag="a" href="#">
-              Porta ac consectetur ac
-            </ListGroupItem>
-            <ListGroupItem tag="a" href="#">
-              Vestibulum at eros
-            </ListGroupItem>
-          </ListGroup>
+        <Container className="pt-5">
+          <Row>
+            <Col sm="6">
+              <img src={home_left} width="100%" alt="sgw dev"/>
+            </Col>
+            <Col sm="6">
+              <h3 className="text-center pt-3">Test</h3>
+              <p className="text-center pt-3">Test</p>
+            </Col>
+          </Row>
         </Container>
         <Jumbotron fluid className="text-center mt-5 home-jumbo">
           <Container fluid>
@@ -299,6 +254,17 @@ export default class Home extends Component {
             </p>
           </Container>
         </Jumbotron>
+        <Container className="pt-5">
+          <Row>
+            <Col sm="6">
+              <h3 className="text-center pt-3">Test</h3>
+              <p className="text-center pt-3">Test</p>
+            </Col>
+            <Col sm="6">
+              <img src={home_left} width="100%" alt="sgw dev"/>
+            </Col>
+          </Row>
+        </Container>
       </React.Fragment>
     );
   }

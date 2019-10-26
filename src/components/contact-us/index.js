@@ -106,11 +106,15 @@ export default class Contact extends Component {
         if (response.ok) {
           return response.json();
         } else {
+          console.log(response);
           throw new Error("Something went wrong...");
         }
       })
       .then(data => this.toggle())
-      .catch(error => this.toggleWithError());
+      .catch(error => {
+        this.toggleWithError();
+        console.log(error);
+      });
   }
 
   render() {

@@ -57,7 +57,23 @@ export default class Footer extends React.Component {
             </Col>
             <Col sm="3">
               <h5 className="text-center">Connect</h5>
-              <p className="text-center">Social Media Coming Soon</p>
+              <ul>
+                <li>
+                  <Link exact to="https://www.facebook.com/groups/817241408710942/">
+                    Facebook
+                  </Link>
+                </li>
+                <li>
+                  <Link exact to="https://www.instagram.com/sgwdev/">
+                    Instagram
+                  </Link>
+                </li>
+                <li>
+                  <Link exact to="https://twitter.com/SGWDev">
+                    Twitter
+                  </Link>
+                </li>
+              </ul>
             </Col>
             <Col sm="3">
               <h5 className="text-center">Members</h5>

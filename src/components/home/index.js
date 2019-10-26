@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ".//home.scss";
 import home_left from "../../assets/images/home/home_left.png";
 import home_right from "../../assets/images/home/home_right.png";
+
 import {
   Button,
   Card,
@@ -261,7 +262,7 @@ export default class Home extends Component {
               <p className="text-center pt-3">Test</p>
             </Col>
             <Col sm="6">
-              <img src={home_left} width="100%" alt="sgw dev"/>
+              <img src={home_right} width="100%" alt="sgw dev"/>
             </Col>
           </Row>
         </Container>

@@ -6,19 +6,19 @@ export default class Contact extends React.Component {
 
   emailNotification = message => {
     switch (message) {
-      case 200:
-        return <Alert color="warning">
+    case 200:
+      return <Alert color="warning">
           Thank you for your submission, we will get back with you soon!
-        </Alert>;
-      case 400:
-        return <Alert color="danger">
+      </Alert>;
+    case 400:
+      return <Alert color="danger">
           Your submission was not sent, please contact us at sgw_dev@emich.edu.
-        </Alert>;
-      case "":
-        return <Alert color="light">
-        </Alert>;
-      default:
-        return null;
+      </Alert>;
+    case "":
+      return <Alert color="light">
+      </Alert>;
+    default:
+      return null;
     }
   };
 

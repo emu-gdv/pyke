@@ -56,7 +56,7 @@ export default class Contact extends React.Component {
       emailOk: true,
       modalMessage: [
         "Your message has been sent successfully.",
-        "TEST"],
+        "Expect a response within 1-2 Days"],
       modalTitle: "Message Sent!",
       modal: !this.state.modal
     });
@@ -68,7 +68,7 @@ export default class Contact extends React.Component {
       emailOk: false,
       modalMessage: [
         "An internal error has occurred.  Email not sent!",
-        "TEST"],
+        "Please email us at sgw_dev@emich.edu"],
       modalTitle: "ERROR: Message NOT Sent!",
       modal: !this.state.modal
     });
@@ -121,7 +121,10 @@ export default class Contact extends React.Component {
         }
       })
       .then(data => this.toggle())
-      .catch(error => this.toggleWithError());
+      .catch(error => {
+        console.log(error);
+        this.toggleWithError();
+      });
   }
 
   render() {

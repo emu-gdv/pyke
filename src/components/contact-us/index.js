@@ -8,12 +8,11 @@ import {
   FormGroup,
   Input,
   Label,
-  Row,
-  Alert,
   Modal,
-  ModalHeader,
   ModalBody,
-  ModalFooter
+  ModalFooter,
+  ModalHeader,
+  Row
 } from "reactstrap";
 import ".//contact.scss";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -96,7 +95,7 @@ export default class Contact extends React.Component {
       return;
     }
 
-    fetch("/contact-us",
+    fetch("/api/contact-form",
       {
         headers: {
           "Accept": "application/json",
@@ -105,7 +104,7 @@ export default class Contact extends React.Component {
         method: "POST",
         body: JSON.stringify(
           {
-            from: `${document.getElementById("name").value}<${document.getElementById("email").value}>`,
+            from: `${document.getElementById("name").value} <${document.getElementById("email").value}>`,
             subject: "Contact Form Submission",
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
@@ -157,7 +156,7 @@ export default class Contact extends React.Component {
                       disabled={!this.state.captchaOk}>Submit</Button>
               <ReCAPTCHA id='captcha'
                          ref='recaptcha'
-                         sitekey="6LfCor8UAAAAAFa_iHNreiE1t9xXjRl0YuVaNmX1"
+                         sitekey='6LfCor8UAAAAAFa_iHNreiE1t9xXjRl0YuVaNmX1'
                          onChange={this.onChange}
               />
             </Form>

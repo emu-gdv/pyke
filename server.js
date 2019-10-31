@@ -52,7 +52,7 @@ app.post("/api/contact-form", function(req, res) {
       mg.messages.create(process.env.MAILGUN_DOMAIN, {
         from: userReq.from,
         to: ["mwilkes@emich.edu, sgw_dev@emich.edu"],
-        subject: "dev.sgwdev.org form submission TODO Change",
+        subject: "sgwdev.org form submission TODO Change",
         text: "SGW Dev Contact Form Submission",
         html: `
             <h1>                  Contact Form Submission</h1>

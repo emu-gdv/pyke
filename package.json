@@ -10,7 +10,7 @@
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "node-start": "npm run build-dev && node server.js",
     "prod": "NODE_ENV=production node server.js",
-    "postinstall": "npm run node-start",
+    "postinstall": "webpack -p --mode development",
     "clean": "rm dist/bundle.js",
     "build-dev": "npm run clean && webpack -d --mode development",
     "build-prod": "npm run clean && webpack -p --mode production"

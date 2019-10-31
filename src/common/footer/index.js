@@ -7,12 +7,12 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="bg-light">
+      <footer className="bg-light footer mt-auto">
         <Container fluid>
           <Row className="pt-3 pb-3">
             <Col sm="3">
               <h5 className="text-center">Quick Links</h5>
-              <ul>
+              <ul className="text-center list">
                 <li>
                   <Link exact to="/">
                     Home
@@ -57,7 +57,23 @@ export default class Footer extends React.Component {
             </Col>
             <Col sm="3">
               <h5 className="text-center">Connect</h5>
-              <p className="text-center">Social Media Coming Soon</p>
+              <ul>
+                <li>
+                  <a  target="_blank" href="https://www.facebook.com/groups/817241408710942/">
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.instagram.com/sgwdev/">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://twitter.com/SGWDev/">
+                    Twitter
+                  </a>
+                </li>
+              </ul>
             </Col>
             <Col sm="3">
               <h5 className="text-center">Members</h5>

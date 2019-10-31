@@ -159,7 +159,7 @@ export default class Contact extends React.Component {
                       disabled={!this.state.captchaOk}>Submit</Button>
               <ReCAPTCHA id='captcha'
                          ref='recaptcha'
-                         sitekey='6LfCor8UAAAAAFa_iHNreiE1t9xXjRl0YuVaNmX1'
+                         sitekey='6LfFgsAUAAAAANmk5aoBQFCWaP-9oZk82y42h5Jq'
                          onChange={this.onChange}
               />
             </Form>

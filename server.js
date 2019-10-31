@@ -10,6 +10,7 @@ const request = require("request");
 const mailgun = require("mailgun.js");
 const mailgunKey = (process.env.MAILGUN_API_KEY);
 const mg = mailgun.client({ username: "api", key: mailgunKey });
+const https = require("https");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -70,6 +71,14 @@ app.post("/api/contact-form", function(req, res) {
         error: "Please verify that you're a human"
       });
     });
+});
+
+//FORCE SSL
+app.use(function(req, res, next) {
+  if (req.headers["x-forwarded-proto"] === "http") {
+    return res.redirect("https://" + req.headers.host + req.url);
+  }
+  next();
 });
 
 app.get("*", function(req, res) {

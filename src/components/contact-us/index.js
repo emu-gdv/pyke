@@ -139,7 +139,7 @@ export default class Contact extends React.Component {
           <Col className="text-center" sm={12}>
             <p>Sub Heading Text</p>
           </Col>
-          <Col sm={8}>
+          <Col sm={6}>
             <Form className="contact-form" id="contact-form" action="/contact-us" method="post">
               <FormGroup>
                 <Label className="mb-2 mr-2" for="name">Name</Label>
@@ -155,13 +155,22 @@ export default class Contact extends React.Component {
                 <Label for="message">Message</Label>
                 <Input type="textarea" name="message" id="message" placeholder="Tell us what 2+2 equals"/>
               </FormGroup>
-              <Button id="submit-button" type='button' onClick={e => this.onSubmitClick(e)}
-                      disabled={!this.state.captchaOk}>Submit</Button>
-              <ReCAPTCHA id='captcha'
-                         ref='recaptcha'
-                         sitekey='6LfFgsAUAAAAANmk5aoBQFCWaP-9oZk82y42h5Jq'
-                         onChange={this.onChange}
-              />
+              <FormGroup>
+                <Row>
+                  <Col lg={6} sm={12}>
+                    <ReCAPTCHA id='captcha' className="mb-2"
+                               ref='recaptcha'
+                               sitekey='6LfFgsAUAAAAANmk5aoBQFCWaP-9oZk82y42h5Jq'
+                               onChange={this.onChange}
+                    />
+                  </Col>
+                  <Col lg={6} sm={12}>
+                    <Button id="submit-button" className=" d-block m-auto" type='button'
+                            onClick={e => this.onSubmitClick(e)}
+                            disabled={!this.state.captchaOk}>Submit</Button>
+                  </Col>
+                </Row>
+              </FormGroup>
             </Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               {/* <Modal isOpen={true} toggle={this.toggle} className={this.props.className}> */}
@@ -178,8 +187,8 @@ export default class Contact extends React.Component {
               </ModalFooter>
             </Modal>
           </Col>
-          <Col sm={4}>
-            <p>Enter your info so we can reach out to you</p>
+          <Col sm={6}>
+            <p className="text-center">Enter your info so we can reach out to you</p>
           </Col>
         </Row>
       </Container>

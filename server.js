@@ -1,34 +1,28 @@
 require("dotenv").config();
-// require("./config/passport-strategies/local");
-// require("./config/passport-strategies/google-oauth");
-// require("./config/passport-strategies/github-oauth");
-// require("./config/routes/routes");
-// require("./config/models/user");
 const express = require("express");
 const path = require("path");
-// const bodyParser = require("body-parser");
-// const cookieParser = require("cookie-parser");
-// const session = require("express-session");
+const bodyParser = require("body-parser");
 const port = process.env.PORT || 3000;
 const app = express();
 const history = require("connect-history-api-fallback");
-
 const Q = require("q");
 const request = require("request");
 const mailgun = require("mailgun.js");
-
 const mailgunKey = (process.env.MAILGUN_API_KEY);
-
 const mg = mailgun.client({ username: "api", key: mailgunKey });
+const https = require("https");
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(history());
 app.use(express.static(path.join(__dirname, "dist")));
 
 // verify from https://goo.gl/8a6Hgm
 function verifyHumanity(req) {
-  const secretKey = process.env.CAPTCHA_SECRET_KEY;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
   const d = Q.defer();
   const recaptchaResponse = req.body.gRecaptchaResponse;
+  console.log(recaptchaResponse);
   request.post("https://www.google.com/recaptcha/api/siteverify", {
     form: {
       secret: secretKey,
@@ -50,15 +44,15 @@ function verifyHumanity(req) {
   return d.promise;
 }
 
-app.post("/contact-us", function(req, res) {
+app.post("/api/contact-form", function(req, res) {
   verifyHumanity(req)
     .then(() => {
       const userReq = req.body;
       mg.messages.create(process.env.MAILGUN_DOMAIN, {
         from: userReq.from,
-        to: ["mwilkes@emich.edu"],
-        subject: "Contact Form Submission",
-        text: "Testing some Mailgun awesomness!",
+        to: ["mwilkes@emich.edu, sgw_dev@emich.edu"],
+        subject: "dev.sgwdev.org form submission TODO Change",
+        text: "SGW Dev Contact Form Submission",
         html: `
             <h1>                  Contact Form Submission</h1>
             <p><b>From: </b>      ${userReq.name}</p>
@@ -76,6 +70,14 @@ app.post("/contact-us", function(req, res) {
         error: "Please verify that you're a human"
       });
     });
+});
+
+//FORCE SSL
+app.use(function(req, res, next) {
+  if (req.headers["x-forwarded-proto"] === "http") {
+    return res.redirect("https://" + req.headers.host + req.url);
+  }
+  next();
 });
 
 app.get("*", function(req, res) {

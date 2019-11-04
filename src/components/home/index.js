@@ -20,22 +20,19 @@ import {
   Col,
   Container,
   Jumbotron,
-  ListGroup,
-  ListGroupItem,
-  Row,
-  Table
+  Row
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
 
 const items = [
   {
-    src: require("../../assets/images/home/software_dev.jpg"),
+    src: require("../../assets/images/home/software_dev.png"),
     altText: "Software Development",
     caption: "Collaborate with other students, mentors, and community professionals while developing and learning new skills"
   },
   {
-    src: require("../../assets/images/home/software_dev.jpg"),
+    src: require("../../assets/images/home/art_design.png"),
     altText: "Recruiting Artists",
     caption: "Are you an Artist or Designer? Consider joining to help with project prototypes, mock-ups, and game design"
   },

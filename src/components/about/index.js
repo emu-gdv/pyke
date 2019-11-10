@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".//about.scss";
-import { Col, Container, Row } from "reactstrap";
+import { Col, Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading } from "reactstrap";
 
 export default class About extends Component {
 
@@ -16,11 +16,22 @@ export default class About extends Component {
                 creative problems</p>
             </Col>
 
-            <Col sm={8}>
-              <h2>Mission Statement</h2>
+            <Col sm={6}>
+              <h2 className="text-center pt-4">Mission Statement</h2>
+              <code>Our organization strives to provide students with opportunities that will develop and improve that
+                students skills through teamwork, engaging projects, and leadership opportunities. Our goal is to
+                provide students the skills to become a competitive pick for their next internship or job they move on
+                too. Teaching students responsibility, leadership, communication skills, and allowing creativity allow
+                our members to thrive.</code>
             </Col>
-            <Col sm={4}>
-              <h2>Goals</h2>
+            <Col sm={6}>
+              <h2 className="text-center pt-4">Goals</h2>
+              <ul>
+                <li className="pl-2"></li>
+                <li className="pl-2"></li>
+                <li className="pl-2"></li>
+                <li className="pl-2"></li>
+              </ul>
             </Col>
           </Row>
         </Container>

@@ -8,6 +8,9 @@ import {
   FormGroup,
   Input,
   Label,
+  ListGroup,
+  ListGroupItem,
+  ListGroupItemHeading,
   Modal,
   ModalBody,
   ModalFooter,
@@ -137,7 +140,7 @@ export default class Contact extends React.Component {
             <h1>Contact Us</h1>
           </Col>
           <Col className="text-center" sm={12}>
-            <p>Sub Heading Text</p>
+            <p>Get Info to Join Today</p>
           </Col>
           <Col sm={6}>
             <Form className="contact-form" id="contact-form" action="/contact-us" method="post">
@@ -188,7 +191,15 @@ export default class Contact extends React.Component {
             </Modal>
           </Col>
           <Col sm={6}>
-            <p className="text-center">Enter your info so we can reach out to you</p>
+            <h3 className="mt-2 mb-2 text-center">We can provide the following:</h3>
+            <ListGroup>
+              <ListGroupItemHeading className="mt-2 text-right">Communication</ListGroupItemHeading>
+              <ListGroupItem>We utilize discord and a mailing list to provide timely information</ListGroupItem>
+              <ListGroupItemHeading className="mt-2 text-right">Onboarding</ListGroupItemHeading>
+              <ListGroupItem>A comprehensive getting started guide can be offered</ListGroupItem>
+              <ListGroupItemHeading className="mt-2 text-right">Questions</ListGroupItemHeading>
+              <ListGroupItem>Any questions, suggestions, or help we can provide, we would be glad too</ListGroupItem>
+            </ListGroup>
           </Col>
         </Row>
       </Container>

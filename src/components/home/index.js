@@ -33,7 +33,7 @@ const items = [
   },
   {
     src: require("../../assets/images/home/art_design.png"),
-    altText: "Recruiting Artists",
+    altText: "Art & Design",
     caption: "Are you an Artist or Designer? Consider joining to help with project prototypes, mock-ups, and game design"
   },
   {
@@ -232,8 +232,15 @@ export default class Home extends Component {
                 <img src={home_left} width="100%" alt="sgw dev"/>
               </Col>
               <Col sm="6">
-                <h3 className="text-center pt-3">Test</h3>
-                <p className="text-center pt-3">Test</p>
+                <h3 className="text-center mt-3">Development & Design</h3>
+                <p className="text-center mt-3">Come work with fellow students on a variety of projects, varying in
+                  difficulty. All skill levels are welcome and encouraged to join. We provide a community of students
+                  that can give advice, provide tutoring and support, and push each other to excel. </p>
+                <Button className="card-button d-block m-auto" type="button">
+                  <Link exact to="/join-now">
+                    Join Us Today
+                  </Link>
+                </Button>
               </Col>
             </Row>
           </Container>
@@ -241,25 +248,21 @@ export default class Home extends Component {
             <Container fluid>
               <h1 className="display-1 center">Our Mission</h1>
               <p className="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                iaculis quam id rhoncus congue. Donec ut accumsan nisl, vitae
-                fermentum enim. Nullam tristique rutrum orci, at placerat urna
-                blandit a. Donec id auctor quam, quis placerat ligula. Quisque
-                ultrices augue vel viverra hendrerit. Donec ornare odio et tortor
-                volutpat gravida. Morbi at justo magna. Nulla est mauris, dictum
-                ut neque a, venenatis accumsan leo. Integer eu quam eget turpis
-                vestibulum porttitor quis in sem. Aenean malesuada, eros porta
-                viverra pretium, dui diam scelerisque mi, vitae sollicitudin ex
-                tortor a dolor. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia Curae;
+                Our organization strives to provide students with opportunities that will develop and improve that
+                students skills through teamwork, engaging projects, and leadership opportunities. Our goal is to
+                provide students the skills to become a competitive pick for their next internship or job they move on
+                too. Teaching students responsibility, leadership, communication skills, and allowing creativity allow
+                our members to thrive.
               </p>
             </Container>
           </Jumbotron>
           <Container className="pt-5">
             <Row>
               <Col sm="6">
-                <h3 className="text-center pt-3">Test</h3>
-                <p className="text-center pt-3">Test</p>
+                <h3 className="text-center mt-3">Professional Development</h3>
+                <p className="text-center mt-3">Our organization offers a variety of resources and activities for
+                  professional development. Meet with industry professionals, get help with resumes, industry standard
+                  practices like git, and gain access to recruiting opportunities.</p>
               </Col>
               <Col sm="6">
                 <img src={home_right} width="100%" alt="sgw dev"/>

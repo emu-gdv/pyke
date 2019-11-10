@@ -263,6 +263,11 @@ export default class Home extends Component {
                 <p className="text-center mt-3">Our organization offers a variety of resources and activities for
                   professional development. Meet with industry professionals, get help with resumes, industry standard
                   practices like git, and gain access to recruiting opportunities.</p>
+                <Button className="card-button d-block m-auto" type="button">
+                  <Link exact to="/contact-us">
+                    Find Out More
+                  </Link>
+                </Button>
               </Col>
               <Col sm="6">
                 <img src={home_right} width="100%" alt="sgw dev"/>

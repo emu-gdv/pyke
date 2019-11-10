@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["standard"],
+  extends: ["standard", "prettier"],
   plugins: ["standard", "react"],
   rules: {
     "no-var": "error", // optional, recommended when using es6+
@@ -18,8 +18,13 @@ module.exports = {
     ],
 
     // options to emulate prettier setup
-    semi: ["error", "never"],
-    "max-len": ["error", { code: 80 }],
+    semi: ["error", "always"],
+    "max-len": ["error", {
+      code: 120,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignorePattern": "<\\s*p[^>]*>([^<]*)<\\s*\\/\\s*p\\s*>"
+    }],
     "template-curly-spacing": ["error", "always"],
     "arrow-parens": ["error", "as-needed"],
 
@@ -27,9 +32,9 @@ module.exports = {
     "space-before-function-paren": [
       "error",
       {
-        named: "always",
-        anonymous: "always",
-        asyncArrow: "always"
+        named: "never",
+        anonymous: "never",
+        asyncArrow: "never"
       }
     ],
 
@@ -45,6 +50,6 @@ module.exports = {
   },
   parser: "babel-eslint",
   parserOptions: {
-    ecmaVersion: 8 // optional, recommended 6+
+    ecmaVersion: 9 // optional, recommended 6+
   }
 };

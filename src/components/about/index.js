@@ -27,10 +27,10 @@ export default class About extends Component {
             <Col sm={6}>
               <h2 className="text-center pt-4">Goals</h2>
               <ul>
-                <li className="pl-2"></li>
-                <li className="pl-2"></li>
-                <li className="pl-2"></li>
-                <li className="pl-2"></li>
+                <li className="pl-2">Learn to work as a team</li>
+                <li className="pl-2">Learn new Languages and Techniques</li>
+                <li className="pl-2">Provide a place for students to grow as developers</li>
+                <li className="pl-2">Provide support for all members, answering questions and tutoring</li>
               </ul>
             </Col>
           </Row>

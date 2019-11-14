@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ".//home.scss";
 import home_left from "../../assets/images/home/home_left.png";
 import home_right from "../../assets/images/home/home_right.png";
+import teamwork from "../../assets/images/1280x720/pair_programming.png";
+import project_work from "../../assets/images/1280x720/mind_map.png";
 
 import {
   Button,
@@ -151,7 +153,7 @@ export default class Home extends Component {
                 <CardImg
                   top
                   width="100%"
-                  src="https://images.unsplash.com/photo-1484504110495-939e9baca603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
+                  src={teamwork}
                   alt="Card image cap"
                 />
                 <CardBody>
@@ -172,7 +174,7 @@ export default class Home extends Component {
                 <CardImg
                   top
                   width="100%"
-                  src="https://images.unsplash.com/photo-1484504110495-939e9baca603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
+                  src={project_work}
                   alt="Card image cap"
                 />
                 <CardBody>

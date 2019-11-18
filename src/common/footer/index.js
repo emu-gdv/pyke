@@ -73,6 +73,11 @@ export default class Footer extends React.Component {
                     Twitter
                   </a>
                 </li>
+                <li>
+                  <a target="_blank" href="https://discord.gg/SYkFJFK">
+                    Discord
+                  </a>
+                </li>
               </ul>
             </Col>
             <Col sm="3">

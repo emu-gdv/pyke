@@ -10,10 +10,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import LoginContainer from "./containers/login";
 import DashboardContainer from "./containers/dashboard";
 import ContactContainer from "./containers/contact-us";
-import GetStartedContainer from "./containers/get-started";
 import ProjectsContainer from "./containers/projects";
 import MeetingNotesContainer from "./containers/meeting-notes";
-import JoinContainer from "./containers/join";
+import ProfessionalDevelopmentContainer from "./containers/professional-development";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
 
@@ -27,10 +26,9 @@ function App() {
         <Route exact path="/login" component={LoginContainer}/>
         <Route exact path="/dashboard" component={DashboardContainer}/>
         <Route exact path="/contact-us" component={ContactContainer}/>
-        <Route exact path="/get-started" component={GetStartedContainer}/>
         <Route exact path="/projects" component={ProjectsContainer}/>
         <Route exact path="/meeting-notes" component={MeetingNotesContainer}/>
-        <Route exact path="/join-now" component={JoinContainer}/>
+        <Route exact path='/professional-development' component={ProfessionalDevelopmentContainer}/>
         <Route exact path={"/auth/google"}/>
         <Route component={NoMatch}/>
       </Switch>

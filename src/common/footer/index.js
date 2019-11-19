@@ -29,13 +29,13 @@ export default class Footer extends React.Component {
                   </Link>
                 </li>
                 <li>
-                  <Link exact to="/get-started">
-                    Getting Started
+                  <Link exact to="/meeting-notes">
+                    Meeting Notes
                   </Link>
                 </li>
                 <li>
-                  <Link exact to="/meeting-notes">
-                    Meeting Notes
+                  <Link exact to="/professional-development">
+                    Professional Development
                   </Link>
                 </li>
               </ul>
@@ -46,11 +46,6 @@ export default class Footer extends React.Component {
                 <li>
                   <Link exact to="/contact-us">
                     Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link exact to="/join-now">
-                    Join Today
                   </Link>
                 </li>
               </ul>

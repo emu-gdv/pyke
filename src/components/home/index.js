@@ -214,6 +214,20 @@ export default class Home extends Component {
                 </CardBody>
               </Card>
             </CardDeck>
+            <Col sm={12} className="text-center pt-4">
+              <h4>Meeting Times</h4>
+              <ul className="list-unstyled">
+                <li>
+                  <span>Software Development:    </span>
+                  <strong>Mondays 7:00pm-9:00pm Pray-Harold Room 217</strong><br/>
+
+                </li>
+                <li>
+                  <span>Game Development:    </span>
+                  <strong>Mondays 7:00pm-9:00pm Pray-Harold Room 217</strong><br/>
+                </li>
+              </ul>
+            </Col>
           </Container>
           <Jumbotron fluid className="text-center mt-5 home-about">
             <Container fluid>

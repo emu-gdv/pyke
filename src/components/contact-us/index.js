@@ -156,7 +156,7 @@ export default class Contact extends React.Component {
               </FormGroup>
               <FormGroup>
                 <Label for="message">Message</Label>
-                <Input type="textarea" name="message" id="message" placeholder="Tell us what 2+2 equals"/>
+                <Input type="textarea" name="message" id="message" placeholder="Let us know how we can help you!"/>
               </FormGroup>
               <FormGroup>
                 <Row>

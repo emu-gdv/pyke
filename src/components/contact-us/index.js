@@ -19,7 +19,7 @@ import {
 } from "reactstrap";
 import ".//contact.scss";
 import ReCAPTCHA from "react-google-recaptcha";
-require('dotenv');
+require('dotenv').config();
 export default class Contact extends React.Component {
 
   constructor(props) {

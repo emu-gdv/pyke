@@ -40,7 +40,7 @@ export default class Contact extends React.Component {
     this.toggleWithError = this.toggleWithError.bind(this);
     this.onSubmitClick = this.onSubmitClick.bind(this);
     this.clearForm = this.clearForm.bind(this);
-    this.captchaSiteKey = this.bind(this);
+    this.captchaSiteKey = this.captchaSiteKey.bind(this);
   }
 
   onChange(value) {

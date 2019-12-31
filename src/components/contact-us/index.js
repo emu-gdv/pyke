@@ -28,7 +28,8 @@ export default class Contact extends React.Component {
       emailOk: false,
       modalTitle: "",
       modalMessage: [],
-      captchaToken: ""
+      captchaToken: "",
+      captchaSiteKey: process.env.RECAPTCHA_SITE_KEY
     };
 
     this.onChange = this.onChange.bind(this);
@@ -36,6 +37,7 @@ export default class Contact extends React.Component {
     this.toggleWithError = this.toggleWithError.bind(this);
     this.onSubmitClick = this.onSubmitClick.bind(this);
     this.clearForm = this.clearForm.bind(this);
+    this.captchaSiteKey = this.bind(this);
 
   }
 
@@ -159,7 +161,7 @@ export default class Contact extends React.Component {
                       disabled={!this.state.captchaOk}>Submit</Button>
               <ReCAPTCHA id='captcha'
                          ref='recaptcha'
-                         sitekey='6LfCor8UAAAAAFa_iHNreiE1t9xXjRl0YuVaNmX1'
+                         sitekey={this.state.captchaSiteKey}
                          onChange={this.onChange}
               />
             </Form>

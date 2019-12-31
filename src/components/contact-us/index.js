@@ -32,7 +32,6 @@ export default class Contact extends React.Component {
       modalTitle: "",
       modalMessage: [],
       captchaToken: "",
-      captchaSiteKey: process.env.RECAPTCHA_SITE_KEY
     };
 
     this.onChange = this.onChange.bind(this);
@@ -40,7 +39,6 @@ export default class Contact extends React.Component {
     this.toggleWithError = this.toggleWithError.bind(this);
     this.onSubmitClick = this.onSubmitClick.bind(this);
     this.clearForm = this.clearForm.bind(this);
-    this.captchaSiteKey = this.captchaSiteKey.bind(this);
   }
 
   onChange(value) {
@@ -164,7 +162,7 @@ export default class Contact extends React.Component {
                   <Col lg={6} sm={12}>
                     <ReCAPTCHA id='captcha' className="mb-2"
                                ref='recaptcha'
-                               sitekey={this.state.captchaSiteKey}
+                               sitekey={process.env.RECAPTCHA_SITE_KEY}
                                onChange={this.onChange}
                     />
                   </Col>

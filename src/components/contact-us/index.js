@@ -32,7 +32,7 @@ export default class Contact extends React.Component {
       modalTitle: "",
       modalMessage: [],
       captchaToken: "",
-      captchaSiteKey: process.env.captchaSiteKey
+      captchaSiteKey: process.env.RECAPTCHA_SITE_KEY
     };
 
     this.onChange = this.onChange.bind(this);
@@ -175,6 +175,14 @@ export default class Contact extends React.Component {
                   </Col>
                 </Row>
               </FormGroup>
+              <Button id="submit-button" type='button' onClick={e => this.onSubmitClick(e)}
+                      disabled={!this.state.captchaOk}>Submit</Button>
+              <ReCAPTCHA id='captcha'
+                         ref='recaptcha'
+                         sitekey={this.state.captchaSiteKey}
+                         onChange={this.onChange}
+              />
+
             </Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               {/* <Modal isOpen={true} toggle={this.toggle} className={this.props.className}> */}

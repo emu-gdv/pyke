@@ -26,8 +26,7 @@ function verifyHumanity(req) {
   request.post("https://www.google.com/recaptcha/api/siteverify", {
     form: {
       secret: secretKey,
-      response: recaptchaResponse,
-      remoteip: req.connection.remoteAddress
+      response: recaptchaResponse
     }
   }, (err, httpResponse, body) => {
     if (err) {

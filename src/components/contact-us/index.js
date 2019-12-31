@@ -162,7 +162,7 @@ export default class Contact extends React.Component {
                   <Col lg={6} sm={12}>
                     <ReCAPTCHA id='captcha' className="mb-2"
                       ref='recaptcha'
-                      sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                      sitekey='6LfFgsAUAAAAANmk5aoBQFCWaP-9oZk82y42h5Jq'
                       onChange={this.onChange}
                     />
                   </Col>

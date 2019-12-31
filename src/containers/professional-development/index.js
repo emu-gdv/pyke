@@ -2,15 +2,15 @@ import React from "react";
 
 import Header from "../../common/header";
 import Footer from "../../common/footer";
-import GetStarted from "../../components/get-started";
+import ProfessionalDevelopment from "../../components/professional-development";
 
-export default class GetStartedContainer extends React.Component {
+export default class ProfessionalDevelopmentContainer extends React.Component {
 
   render() {
     return (
       <React.Fragment>
         <Header/>
-        <GetStarted/>
+        <ProfessionalDevelopment/>
         <Footer/>
       </React.Fragment>
     );

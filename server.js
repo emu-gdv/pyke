@@ -50,8 +50,8 @@ app.post("/api/contact-form", function(req, res) {
       const userReq = req.body;
       mg.messages.create(process.env.MAILGUN_DOMAIN, {
         from: userReq.from,
-        to: ["mwilkes@emich.edu, sgw_dev@emich.edu"],
-        subject: "dev.sgwdev.org form submission TODO Change",
+        to: ["mwilkes@emich.edu, sgw_dev@emich.edu, sburke17@emich.edu"],
+        subject: "sgwdev.org Contact us Submission",
         text: "SGW Dev Contact Form Submission",
         html: `
             <h1>                  Contact Form Submission</h1>
@@ -72,7 +72,7 @@ app.post("/api/contact-form", function(req, res) {
     });
 });
 
-//FORCE SSL
+// FORCE SSL
 app.use(function(req, res, next) {
   if (req.headers["x-forwarded-proto"] === "http") {
     return res.redirect("https://" + req.headers.host + req.url);

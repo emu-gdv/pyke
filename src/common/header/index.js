@@ -58,13 +58,8 @@ export default class Header extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} exact to="/get-started">
-                  Getting Started
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} exact to="/join-now">
-                  Join Now
+                <NavLink tag={Link} exact to="/professional-development">
+                  Professional Development
                 </NavLink>
               </NavItem>
               <NavItem>

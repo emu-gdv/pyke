@@ -8,6 +8,9 @@ import {
   FormGroup,
   Input,
   Label,
+  ListGroup,
+  ListGroupItem,
+  ListGroupItemHeading,
   Modal,
   ModalBody,
   ModalFooter,
@@ -38,7 +41,6 @@ export default class Contact extends React.Component {
     this.onSubmitClick = this.onSubmitClick.bind(this);
     this.clearForm = this.clearForm.bind(this);
     this.captchaSiteKey = this.bind(this);
-
   }
 
   onChange(value) {
@@ -139,9 +141,9 @@ export default class Contact extends React.Component {
             <h1>Contact Us</h1>
           </Col>
           <Col className="text-center" sm={12}>
-            <p>Sub Heading Text</p>
+            <p>Get Info to Join Today</p>
           </Col>
-          <Col sm={8}>
+          <Col sm={6}>
             <Form className="contact-form" id="contact-form" action="/contact-us" method="post">
               <FormGroup>
                 <Label className="mb-2 mr-2" for="name">Name</Label>
@@ -155,7 +157,23 @@ export default class Contact extends React.Component {
               </FormGroup>
               <FormGroup>
                 <Label for="message">Message</Label>
-                <Input type="textarea" name="message" id="message" placeholder="Tell us what 2+2 equals"/>
+                <Input type="textarea" name="message" id="message" placeholder="Let us know how we can help you!"/>
+              </FormGroup>
+              <FormGroup>
+                <Row>
+                  <Col lg={6} sm={12}>
+                    <ReCAPTCHA id='captcha' className="mb-2"
+                               ref='recaptcha'
+                               sitekey={this.state.captchaSiteKey}
+                               onChange={this.onChange}
+                    />
+                  </Col>
+                  <Col lg={6} sm={12}>
+                    <Button id="submit-button" className=" d-block m-auto" type='button'
+                            onClick={e => this.onSubmitClick(e)}
+                            disabled={!this.state.captchaOk}>Submit</Button>
+                  </Col>
+                </Row>
               </FormGroup>
               <Button id="submit-button" type='button' onClick={e => this.onSubmitClick(e)}
                       disabled={!this.state.captchaOk}>Submit</Button>
@@ -164,6 +182,7 @@ export default class Contact extends React.Component {
                          sitekey={this.state.captchaSiteKey}
                          onChange={this.onChange}
               />
+
             </Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               {/* <Modal isOpen={true} toggle={this.toggle} className={this.props.className}> */}
@@ -180,8 +199,16 @@ export default class Contact extends React.Component {
               </ModalFooter>
             </Modal>
           </Col>
-          <Col sm={4}>
-            <p>Enter your info so we can reach out to you</p>
+          <Col sm={6}>
+            <h3 className="mt-2 mb-2 text-center">We can provide the following:</h3>
+            <ListGroup>
+              <ListGroupItemHeading className="mt-2 text-right">Communication</ListGroupItemHeading>
+              <ListGroupItem>We utilize discord and a mailing list to provide timely information</ListGroupItem>
+              <ListGroupItemHeading className="mt-2 text-right">Onboarding</ListGroupItemHeading>
+              <ListGroupItem>A comprehensive getting started guide can be offered</ListGroupItem>
+              <ListGroupItemHeading className="mt-2 text-right">Questions</ListGroupItemHeading>
+              <ListGroupItem>Any questions, suggestions, or help we can provide, we would be glad too</ListGroupItem>
+            </ListGroup>
           </Col>
         </Row>
       </Container>

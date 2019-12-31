@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
           <Row className="pt-3 pb-3">
             <Col sm="3">
               <h5 className="text-center">Quick Links</h5>
-              <ul className="text-center list">
+              <ul className="text-center list-unstyled">
                 <li>
                   <Link exact to="/">
                     Home
@@ -29,35 +29,30 @@ export default class Footer extends React.Component {
                   </Link>
                 </li>
                 <li>
-                  <Link exact to="/get-started">
-                    Getting Started
+                  <Link exact to="/meeting-notes">
+                    Meeting Notes
                   </Link>
                 </li>
                 <li>
-                  <Link exact to="/meeting-notes">
-                    Meeting Notes
+                  <Link exact to="/professional-development">
+                    Professional Development
                   </Link>
                 </li>
               </ul>
             </Col>
             <Col sm="3">
               <h5 className="text-center">How to Reach Us</h5>
-              <ul>
+              <ul className="text-center list-unstyled">
                 <li>
                   <Link exact to="/contact-us">
                     Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link exact to="/join-now">
-                    Join Today
                   </Link>
                 </li>
               </ul>
             </Col>
             <Col sm="3">
               <h5 className="text-center">Connect</h5>
-              <ul>
+              <ul className="text-center list-unstyled">
                 <li>
                   <a  target="_blank" href="https://www.facebook.com/groups/817241408710942/">
                     Facebook
@@ -71,6 +66,11 @@ export default class Footer extends React.Component {
                 <li>
                   <a target="_blank" href="https://twitter.com/SGWDev/">
                     Twitter
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://discord.gg/SYkFJFK">
+                    Discord
                   </a>
                 </li>
               </ul>

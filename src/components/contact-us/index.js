@@ -31,7 +31,7 @@ export default class Contact extends React.Component {
       emailOk: false,
       modalTitle: "",
       modalMessage: [],
-      captchaToken: "",
+      captchaToken: ""
     };
 
     this.onChange = this.onChange.bind(this);
@@ -106,7 +106,7 @@ export default class Contact extends React.Component {
         method: "POST",
         body: JSON.stringify(
           {
-            from: `${document.getElementById("name").value} <${document.getElementById("email").value}>`,
+            from: `${ document.getElementById("name").value } <${ document.getElementById("email").value }>`,
             subject: "Contact Form Submission",
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
@@ -161,24 +161,24 @@ export default class Contact extends React.Component {
                 <Row>
                   <Col lg={6} sm={12}>
                     <ReCAPTCHA id='captcha' className="mb-2"
-                               ref='recaptcha'
-                               sitekey={this.state.captchaSiteKey}
-                               onChange={this.onChange}
+                      ref='recaptcha'
+                      sitekey={process.env.RECAPTCHA_SITE_KEY}
+                      onChange={this.onChange}
                     />
                   </Col>
                   <Col lg={6} sm={12}>
                     <Button id="submit-button" className=" d-block m-auto" type='button'
-                            onClick={e => this.onSubmitClick(e)}
-                            disabled={!this.state.captchaOk}>Submit</Button>
+                      onClick={e => this.onSubmitClick(e)}
+                      disabled={!this.state.captchaOk}>Submit</Button>
                   </Col>
                 </Row>
               </FormGroup>
               <Button id="submit-button" type='button' onClick={e => this.onSubmitClick(e)}
-                      disabled={!this.state.captchaOk}>Submit</Button>
+                disabled={!this.state.captchaOk}>Submit</Button>
               <ReCAPTCHA id='captcha'
-                         ref='recaptcha'
-                         sitekey={process.env.RECAPTCHA_SITE_KEY}
-                         onChange={this.onChange}
+                ref='recaptcha'
+                sitekey={process.env.RECAPTCHA_SITE_KEY}
+                onChange={this.onChange}
               />
 
             </Form>
@@ -188,7 +188,7 @@ export default class Contact extends React.Component {
               <ModalBody>
                 {this.state.modalMessage.map((item, index) => {
                   return (
-                    <p key={`message-${index}`}>{item}</p>
+                    <p key={`message-${ index }`}>{item}</p>
                   );
                 })}
               </ModalBody>

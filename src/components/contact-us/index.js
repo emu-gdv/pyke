@@ -1,4 +1,3 @@
-require('dotenv');
 import React from "react";
 import {
   Button,
@@ -20,6 +19,7 @@ import {
 } from "reactstrap";
 import ".//contact.scss";
 import ReCAPTCHA from "react-google-recaptcha";
+require('dotenv');
 export default class Contact extends React.Component {
 
   constructor(props) {

@@ -177,7 +177,7 @@ export default class Contact extends React.Component {
                       disabled={!this.state.captchaOk}>Submit</Button>
               <ReCAPTCHA id='captcha'
                          ref='recaptcha'
-                         sitekey={this.state.captchaSiteKey}
+                         sitekey={process.env.RECAPTCHA_SITE_KEY}
                          onChange={this.onChange}
               />
 

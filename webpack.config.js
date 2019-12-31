@@ -2,12 +2,16 @@ const path = require("path");
 
 const config = {
   mode: "development",
+
   entry: "./src/index.js",
+
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
+
   target: "web",
+
   module: {
     rules: [
       {
@@ -75,7 +79,7 @@ const config = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
-  //Workaround
+  // Workaround
   node: {
     fs: "empty"
   },

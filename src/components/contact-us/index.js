@@ -162,7 +162,7 @@ export default class Contact extends React.Component {
                   <Col lg={6} sm={12}>
                     <ReCAPTCHA id='captcha' className="mb-2"
                       ref='recaptcha'
-                      sitekey={process.env.RECAPTCHA_SITE_KEY}
+                      sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                       onChange={this.onChange}
                     />
                   </Col>
@@ -173,14 +173,6 @@ export default class Contact extends React.Component {
                   </Col>
                 </Row>
               </FormGroup>
-              <Button id="submit-button" type='button' onClick={e => this.onSubmitClick(e)}
-                disabled={!this.state.captchaOk}>Submit</Button>
-              <ReCAPTCHA id='captcha'
-                ref='recaptcha'
-                sitekey={process.env.RECAPTCHA_SITE_KEY}
-                onChange={this.onChange}
-              />
-
             </Form>
             <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               {/* <Modal isOpen={true} toggle={this.toggle} className={this.props.className}> */}

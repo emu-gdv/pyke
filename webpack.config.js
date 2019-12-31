@@ -75,6 +75,10 @@ const config = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
+  //Workaround
+  node: {
+    fs: "empty"
+  },
   devServer: {
     contentBase: "./dist",
     hot: true,

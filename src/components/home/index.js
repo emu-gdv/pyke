@@ -4,7 +4,7 @@ import home_left from "../../assets/images/home/home_left.png";
 import home_right from "../../assets/images/home/home_right.png";
 import teamwork from "../../assets/images/1280x720/pair_programming.png";
 import project_work from "../../assets/images/1280x720/mind_map.png";
-import contact from "../../assets/images/1280x720/setup_wizard.png"
+import contact from "../../assets/images/1280x720/setup_wizard.png";
 
 import {
   Button,
@@ -207,13 +207,27 @@ export default class Home extends Component {
                     Organization
                   </CardText>
                   <Button className="card-button d-block m-auto">
-                    <Link exact to="/join-now">
+                    <Link exact to="/contact-us">
                       Join Now
                     </Link>
                   </Button>
                 </CardBody>
               </Card>
             </CardDeck>
+            <Col sm={12} className="text-center pt-4">
+              <h4>Meeting Times</h4>
+              <ul className="list-unstyled">
+                <li>
+                  <span>Software Development:    </span>
+                  <strong>Mondays 7:00pm-9:00pm Pray-Harold Room 217</strong><br/>
+
+                </li>
+                <li>
+                  <span>Game Development:    </span>
+                  <strong>Mondays 7:00pm-9:00pm Pray-Harold Room 217</strong><br/>
+                </li>
+              </ul>
+            </Col>
           </Container>
           <Jumbotron fluid className="text-center mt-5 home-about">
             <Container fluid>
@@ -240,7 +254,7 @@ export default class Home extends Component {
                   difficulty. All skill levels are welcome and encouraged to join. We provide a community of students
                   that can give advice, provide tutoring and support, and push each other to excel. </p>
                 <Button className="card-button d-block m-auto" type="button">
-                  <Link exact to="/join-now">
+                  <Link exact to="/contact-us">
                     Join Us Today
                   </Link>
                 </Button>

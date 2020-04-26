@@ -13,6 +13,7 @@ import ContactContainer from "./containers/contact-us";
 import ProjectsContainer from "./containers/projects";
 import MeetingNotesContainer from "./containers/meeting-notes";
 import ProfessionalDevelopmentContainer from "./containers/professional-development";
+import PrivacyContainer from "./containers/privacy-policy";
 
 ReactDOM.render(<App/>, document.getElementById("root"));
 
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/projects" component={ProjectsContainer}/>
         <Route exact path="/meeting-notes" component={MeetingNotesContainer}/>
         <Route exact path='/professional-development' component={ProfessionalDevelopmentContainer}/>
+        <Route exact path='/privacy-policy' component={PrivacyContainer}/>
         <Route exact path={"/auth/google"}/>
         <Route component={NoMatch}/>
       </Switch>

@@ -38,6 +38,11 @@ export default class Footer extends React.Component {
                     Professional Development
                   </Link>
                 </li>
+                <li>
+                  <Link exact to="/privacy-policy">
+                    Privacy Policy
+                  </Link>
+                </li>
               </ul>
             </Col>
             <Col sm="3">

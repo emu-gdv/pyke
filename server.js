@@ -55,9 +55,9 @@ app.post("/api/contact-form", function(req, res) {
         text: "SGW Dev Contact Form Submission",
         html: `
             <h1>                  Contact Form Submission</h1>
-            <p><b>From: </b>      ${userReq.name}</p>
-            <p><b>Email: </b>     ${userReq.email}</p>
-            <p><b>Message: </b>   ${userReq.message}</p>`
+            <p><b>From: </b>      ${ userReq.name }</p>
+            <p><b>Email: </b>     ${ userReq.email }</p>
+            <p><b>Message: </b>   ${ userReq.message }</p>`
       })
         .then(res.send({ status: "OK" }))
         .then(msg => console.log(msg)) // logs response data
